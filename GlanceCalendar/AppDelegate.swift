@@ -65,6 +65,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     func menuWillOpen(_ menu: NSMenu) {
+        calendarViewController.view.frame.size.width = menu.size.width
         menuIsOpen = true
         updateTime()
     }

@@ -7,4 +7,9 @@ target 'GlanceCalendar' do
 
   # Pods for GlanceCalendar
   pod 'SwiftMoment'
+  
+  target 'GlanceCalendarTests' do
+    inherit! :search_paths
+  end
 end
+

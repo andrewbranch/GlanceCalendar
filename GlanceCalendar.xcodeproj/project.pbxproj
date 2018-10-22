@@ -16,11 +16,25 @@
 		49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E57217D57C7007C27ED /* CalendarViewController.swift */; };
 		49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49004E58217D57C7007C27ED /* CalendarViewController.xib */; };
 		49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E5C217D6522007C27ED /* CalendarGrid.swift */; };
+		494109F0217D6EB800DE2B45 /* CalendarGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */; };
+		494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */; };
+		494109FC217D798D00DE2B45 /* CalendarDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494109FA217D798D00DE2B45 /* CalendarDayViewController.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		494109F2217D6EB800DE2B45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49004E34217D2C9C007C27ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49004E3B217D2C9C007C27ED;
+			remoteInfo = GlanceCalendar;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31131F285E183DEB0DFBBC34 /* Pods-GlanceCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		3621AB4754AC36A3F17AE6EA /* Pods-GlanceCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		49004E3C217D2C9C007C27ED /* GlanceCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlanceCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49004E3F217D2C9C007C27ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49004E41217D2C9C007C27ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +46,12 @@
 		49004E57217D57C7007C27ED /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		49004E58217D57C7007C27ED /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
 		49004E5C217D6522007C27ED /* CalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGrid.swift; sourceTree = "<group>"; };
+		494109ED217D6EB800DE2B45 /* GlanceCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlanceCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridTests.swift; sourceTree = "<group>"; };
+		494109F1217D6EB800DE2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayViewController.swift; sourceTree = "<group>"; };
+		494109FA217D798D00DE2B45 /* CalendarDayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDayViewController.xib; sourceTree = "<group>"; };
+		4CB80A895BB6AA85D55B08AB /* Pods-GlanceCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		494109EA217D6EB800DE2B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -51,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				49004E3E217D2C9C007C27ED /* GlanceCalendar */,
+				494109EE217D6EB800DE2B45 /* GlanceCalendarTests */,
 				49004E3D217D2C9C007C27ED /* Products */,
 				F7023350DC027CE6A9390050 /* Pods */,
 				C9B3933A127766A7564194CC /* Frameworks */,
@@ -61,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				49004E3C217D2C9C007C27ED /* GlanceCalendar.app */,
+				494109ED217D6EB800DE2B45 /* GlanceCalendarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,8 +107,19 @@
 				49004E57217D57C7007C27ED /* CalendarViewController.swift */,
 				49004E58217D57C7007C27ED /* CalendarViewController.xib */,
 				49004E5C217D6522007C27ED /* CalendarGrid.swift */,
+				494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */,
+				494109FA217D798D00DE2B45 /* CalendarDayViewController.xib */,
 			);
 			path = GlanceCalendar;
+			sourceTree = "<group>";
+		};
+		494109EE217D6EB800DE2B45 /* GlanceCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */,
+				494109F1217D6EB800DE2B45 /* Info.plist */,
+			);
+			path = GlanceCalendarTests;
 			sourceTree = "<group>";
 		};
 		C9B3933A127766A7564194CC /* Frameworks */ = {
@@ -95,6 +135,8 @@
 			children = (
 				31131F285E183DEB0DFBBC34 /* Pods-GlanceCalendar.debug.xcconfig */,
 				70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */,
+				3621AB4754AC36A3F17AE6EA /* Pods-GlanceCalendarTests.debug.xcconfig */,
+				4CB80A895BB6AA85D55B08AB /* Pods-GlanceCalendarTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -121,6 +163,25 @@
 			productReference = 49004E3C217D2C9C007C27ED /* GlanceCalendar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		494109EC217D6EB800DE2B45 /* GlanceCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 494109F4217D6EB800DE2B45 /* Build configuration list for PBXNativeTarget "GlanceCalendarTests" */;
+			buildPhases = (
+				5C69F55A1ECCF7A1C2E251BE /* [CP] Check Pods Manifest.lock */,
+				494109E9217D6EB800DE2B45 /* Sources */,
+				494109EA217D6EB800DE2B45 /* Frameworks */,
+				494109EB217D6EB800DE2B45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				494109F3217D6EB800DE2B45 /* PBXTargetDependency */,
+			);
+			name = GlanceCalendarTests;
+			productName = GlanceCalendarTests;
+			productReference = 494109ED217D6EB800DE2B45 /* GlanceCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -133,6 +194,10 @@
 				TargetAttributes = {
 					49004E3B217D2C9C007C27ED = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					494109EC217D6EB800DE2B45 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 49004E3B217D2C9C007C27ED;
 					};
 				};
 			};
@@ -150,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				49004E3B217D2C9C007C27ED /* GlanceCalendar */,
+				494109EC217D6EB800DE2B45 /* GlanceCalendarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -160,8 +226,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */,
+				494109FC217D798D00DE2B45 /* CalendarDayViewController.xib in Resources */,
 				49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */,
 				49004E47217D2C9D007C27ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494109EB217D6EB800DE2B45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +258,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C69F55A1ECCF7A1C2E251BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GlanceCalendarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C29D1578160D994D562973BB /* [CP] Check Pods Manifest.lock */ = {
@@ -212,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */,
+				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
 				49004E42217D2C9C007C27ED /* ViewController.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
 				49004E50217D2E55007C27ED /* DateExtensions.swift in Sources */,
@@ -219,7 +312,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		494109E9217D6EB800DE2B45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494109F0217D6EB800DE2B45 /* CalendarGridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		494109F3217D6EB800DE2B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49004E3B217D2C9C007C27ED /* GlanceCalendar */;
+			targetProxy = 494109F2217D6EB800DE2B45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		49004E45217D2C9D007C27ED /* Main.storyboard */ = {
@@ -354,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GlanceCalendar/GlanceCalendar.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Y7U83U369J;
@@ -364,6 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wheream.io.GlanceCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -374,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GlanceCalendar/GlanceCalendar.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Y7U83U369J;
@@ -384,7 +496,56 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wheream.io.GlanceCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		494109F5217D6EB800DE2B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3621AB4754AC36A3F17AE6EA /* Pods-GlanceCalendarTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7U83U369J;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+				INFOPLIST_FILE = GlanceCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wheream.io.GlanceCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlanceCalendar.app/Contents/MacOS/GlanceCalendar";
+			};
+			name = Debug;
+		};
+		494109F6217D6EB800DE2B45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CB80A895BB6AA85D55B08AB /* Pods-GlanceCalendarTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7U83U369J;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+				INFOPLIST_FILE = GlanceCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wheream.io.GlanceCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlanceCalendar.app/Contents/MacOS/GlanceCalendar";
 			};
 			name = Release;
 		};
@@ -405,6 +566,15 @@
 			buildConfigurations = (
 				49004E4D217D2C9D007C27ED /* Debug */,
 				49004E4E217D2C9D007C27ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		494109F4217D6EB800DE2B45 /* Build configuration list for PBXNativeTarget "GlanceCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494109F5217D6EB800DE2B45 /* Debug */,
+				494109F6217D6EB800DE2B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

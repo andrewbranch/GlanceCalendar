@@ -9,16 +9,19 @@
 /* Begin PBXBuildFile section */
 		098817E25080752A8891AEED837A6C97 /* MomentFromNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2FA04E0E6A231BC826DC0968BD9F54 /* MomentFromNow.swift */; };
 		1FC4E5FAAAE9F5B86205BB203B16452C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		3D51CD92ACE4319972515172A0EEB2ED /* Pods-GlanceCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10A88FC0AC3A497B8948A03A8F7302EC /* Pods-GlanceCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D51CD92ACE4319972515172A0EEB2ED /* Pods-GlanceCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7274380CC438897662975CC4E6926E6C /* Pods-GlanceCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		428BBBCF85D2646C257373C46FC43DA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0CB53D1FEEF50F34941085574E1BAC /* Extensions.swift */; };
 		585A5C22B25E408073C579823877B08C /* SwiftMoment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C5891FAEA61F3AA70696BFAEF4A79BE /* SwiftMoment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58BB9F4C93CFD4CD2FD0BDDF12200AC2 /* Pods-GlanceCalendarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936417B875C1EBE438A4572AD53C6B6 /* Pods-GlanceCalendarTests-dummy.m */; };
 		640C002C4BE513606CAE5B489C7DAE41 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D541FEDC1F17F848FAD78E9B25E27 /* TimeUnit.swift */; };
+		7BA2334FB2AC83A1E8879A649F77F5F1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
 		7D9C4DE3F11F274FEFFFFADFB991B26A /* SwiftMoment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7DBABA5FD42D96C8FB3A51D3E18EEE /* SwiftMoment-dummy.m */; };
-		7F1ABD1E31D48187C92C6DE7D0C70B0E /* Pods-GlanceCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C02CA44F88331B16AE1B46DD6DDCF /* Pods-GlanceCalendar-dummy.m */; };
+		7F1ABD1E31D48187C92C6DE7D0C70B0E /* Pods-GlanceCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC3E2F9B8C75D200A62A8BBAC08891 /* Pods-GlanceCalendar-dummy.m */; };
 		8AA14888FEFF87C76DF09CE1FAC1D16F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B553FC5004F869605B332BAA4B408 /* Operators.swift */; };
 		8E79ED448637121079863302C2F9F721 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C970A80969E00274481CFD48E2DC55 /* Duration.swift */; };
 		92F15974234B30B672A9E2878AB79362 /* LazyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8818D2B40A76462131EE595202FBA238 /* LazyBox.swift */; };
 		B56526715FAC83A8136FF4158CBBC14C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		BD557B0B8C14D2B684C5C68DD7410985 /* Pods-GlanceCalendarTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B083059F3547D345B4F2A32CF7DD12C /* Pods-GlanceCalendarTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE73455A387B3BDB1AC4C69AA0F588CF /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89E4FAF39D74D787CA031B8B597F7A /* Moment.swift */; };
 		E4D4328B68C3DAF2150DF228F74BFDDF /* SwiftMoment.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BABCC09A59B8F1B00A3C732BF27AFC8 /* SwiftMoment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA38A875089340A67D06EE69665F226 /* MomentFromNow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B6E7BBB21E0C53EE5DD1B48AC59 /* MomentFromNow.bundle */; };
@@ -32,38 +35,56 @@
 			remoteGlobalIDString = F2DF7028EDBAA6CF146C9570D1E6420B;
 			remoteInfo = SwiftMoment;
 		};
+		93A5A4CBA005236FA40571A900924FA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68E5051FB096EC5D92D87B6C3DFD5442;
+			remoteInfo = "Pods-GlanceCalendar";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00DC9EF0CE98E6DE2F5CE78578E72482 /* SwiftMoment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMoment-prefix.pch"; sourceTree = "<group>"; };
-		10A88FC0AC3A497B8948A03A8F7302EC /* Pods-GlanceCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GlanceCalendar-umbrella.h"; sourceTree = "<group>"; };
+		0936417B875C1EBE438A4572AD53C6B6 /* Pods-GlanceCalendarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GlanceCalendarTests-dummy.m"; sourceTree = "<group>"; };
+		12183A3A88090A20A1DDD38DE9DE5F36 /* Pods-GlanceCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlanceCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		1B083059F3547D345B4F2A32CF7DD12C /* Pods-GlanceCalendarTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GlanceCalendarTests-umbrella.h"; sourceTree = "<group>"; };
 		1E0CB53D1FEEF50F34941085574E1BAC /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SwiftMoment/SwiftMoment/Extensions.swift; sourceTree = "<group>"; };
 		1E7DBABA5FD42D96C8FB3A51D3E18EEE /* SwiftMoment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMoment-dummy.m"; sourceTree = "<group>"; };
+		288F2A27544024E87A7C891C67CBB6DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29AFE0D8F91BD35D4FE06CD7AB363EE4 /* Pods-GlanceCalendarTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GlanceCalendarTests.modulemap"; sourceTree = "<group>"; };
 		2BABCC09A59B8F1B00A3C732BF27AFC8 /* SwiftMoment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftMoment.h; path = SwiftMoment/SwiftMoment/SwiftMoment.h; sourceTree = "<group>"; };
+		2CBC0603937C0A9621D368E7FD676BF6 /* SwiftMoment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMoment.framework; path = SwiftMoment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2D541FEDC1F17F848FAD78E9B25E27 /* TimeUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeUnit.swift; path = SwiftMoment/SwiftMoment/TimeUnit.swift; sourceTree = "<group>"; };
 		2E2FA04E0E6A231BC826DC0968BD9F54 /* MomentFromNow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MomentFromNow.swift; path = SwiftMoment/SwiftMoment/MomentFromNow.swift; sourceTree = "<group>"; };
-		3519BFED445D2579F32D86BC763E40D8 /* Pods-GlanceCalendar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlanceCalendar-resources.sh"; sourceTree = "<group>"; };
-		3D4C02CA44F88331B16AE1B46DD6DDCF /* Pods-GlanceCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GlanceCalendar-dummy.m"; sourceTree = "<group>"; };
+		2F0110B913E396D744FF4518DE3F843F /* Pods-GlanceCalendar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GlanceCalendar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		35B282B6FA8F04653AA1DAE6BB1A4CA6 /* Pods-GlanceCalendarTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlanceCalendarTests-frameworks.sh"; sourceTree = "<group>"; };
+		3824B46931403A8E0AE984ED39187870 /* Pods-GlanceCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlanceCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		419B553FC5004F869605B332BAA4B408 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = SwiftMoment/SwiftMoment/Operators.swift; sourceTree = "<group>"; };
+		41ACD80E51FA1DE9BFB509083E0E629F /* Pods-GlanceCalendarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GlanceCalendarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		46C970A80969E00274481CFD48E2DC55 /* Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Duration.swift; path = SwiftMoment/SwiftMoment/Duration.swift; sourceTree = "<group>"; };
-		4C2BEE57B27F833642BAD54D62C70A16 /* Pods-GlanceCalendar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GlanceCalendar-acknowledgements.plist"; sourceTree = "<group>"; };
+		4A883FB364E12B94A1366CD19598CF21 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		4CFC3E2F9B8C75D200A62A8BBAC08891 /* Pods-GlanceCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GlanceCalendar-dummy.m"; sourceTree = "<group>"; };
+		53FF894289FC98B6AD779DC49DB30D07 /* Pods_GlanceCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GlanceCalendar.framework; path = "Pods-GlanceCalendar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		586FCA58017C31F2855E81FF7941809C /* Pods-GlanceCalendar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlanceCalendar-frameworks.sh"; sourceTree = "<group>"; };
 		5C5891FAEA61F3AA70696BFAEF4A79BE /* SwiftMoment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMoment-umbrella.h"; sourceTree = "<group>"; };
-		703F758939152593D53D29560761AB3D /* Pods-GlanceCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GlanceCalendar.modulemap"; sourceTree = "<group>"; };
+		5CE11483C98D2D8F3FE8F234254F028B /* Pods-GlanceCalendarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GlanceCalendarTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7274380CC438897662975CC4E6926E6C /* Pods-GlanceCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GlanceCalendar-umbrella.h"; sourceTree = "<group>"; };
 		7A89E4FAF39D74D787CA031B8B597F7A /* Moment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Moment.swift; path = SwiftMoment/SwiftMoment/Moment.swift; sourceTree = "<group>"; };
 		7FE0EEB5EF6F4AA8A4DA5827092D076C /* SwiftMoment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMoment.xcconfig; sourceTree = "<group>"; };
-		87A50A98BB533172F5B761C1385F851F /* Pods_GlanceCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GlanceCalendar.framework; path = "Pods-GlanceCalendar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8818D2B40A76462131EE595202FBA238 /* LazyBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyBox.swift; path = SwiftMoment/SwiftMoment/LazyBox.swift; sourceTree = "<group>"; };
-		93315B73EF03846126EAA4344A3D663F /* SwiftMoment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMoment.framework; path = SwiftMoment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B008148243DECEE3D70A41F2AC6D37E /* Pods-GlanceCalendar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GlanceCalendar-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A8F3101C6B2B305C90AEBEEF7B4D7715 /* Pods-GlanceCalendar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlanceCalendar-frameworks.sh"; sourceTree = "<group>"; };
-		AC3853EBB0999304FFC7F0EED1307774 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBF093D1617AFAD85233100202D9CB7 /* Pods-GlanceCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GlanceCalendar.modulemap"; sourceTree = "<group>"; };
+		B589F4D74074AB6B940C289D65CC53FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDCECD20A921C479D4183C520217249F /* Pods-GlanceCalendar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlanceCalendar-resources.sh"; sourceTree = "<group>"; };
 		CC9ED032213050F1A385C493E9485755 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCBB6D865F5F179CADA83B0E1A697367 /* Pods-GlanceCalendar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GlanceCalendar-acknowledgements.plist"; sourceTree = "<group>"; };
+		CD6C242BC84858E5490A00A860E94DBA /* Pods-GlanceCalendarTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GlanceCalendarTests-resources.sh"; sourceTree = "<group>"; };
 		D91D8B6E7BBB21E0C53EE5DD1B48AC59 /* MomentFromNow.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = MomentFromNow.bundle; path = SwiftMoment/SwiftMoment/MomentFromNow.bundle; sourceTree = "<group>"; };
 		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		EC9483A7F8C401064227E00165F75C3E /* Pods-GlanceCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlanceCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		E417B16CE0B4D0B948ABAA1E0829A414 /* Pods-GlanceCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlanceCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF8A9A7D24A78B56AAA7E10C77D635C0 /* SwiftMoment.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMoment.modulemap; sourceTree = "<group>"; };
-		F185B71BD15639C1D9CC11B745DCFBE4 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		FCB46DD9F5E3A8582781E90BFCBD724A /* Pods_GlanceCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GlanceCalendarTests.framework; path = "Pods-GlanceCalendarTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,15 +104,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E8F1C446E4586466F68DF59676E3015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA2334FB2AC83A1E8879A649F77F5F1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		28997C1DF78E43346E2D66D74A69FF62 /* Targets Support Files */ = {
+		30888981CF6C89157B9BC7354352FEB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D97277BEFE4C3528A85BC3126393CFA1 /* Pods-GlanceCalendar */,
+				53FF894289FC98B6AD779DC49DB30D07 /* Pods_GlanceCalendar.framework */,
+				FCB46DD9F5E3A8582781E90BFCBD724A /* Pods_GlanceCalendarTests.framework */,
+				2CBC0603937C0A9621D368E7FD676BF6 /* SwiftMoment.framework */,
 			);
-			name = "Targets Support Files";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3098F4C6592DBDB04482844216B93AEF /* Pods-GlanceCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				B589F4D74074AB6B940C289D65CC53FF /* Info.plist */,
+				AEBF093D1617AFAD85233100202D9CB7 /* Pods-GlanceCalendar.modulemap */,
+				2F0110B913E396D744FF4518DE3F843F /* Pods-GlanceCalendar-acknowledgements.markdown */,
+				CCBB6D865F5F179CADA83B0E1A697367 /* Pods-GlanceCalendar-acknowledgements.plist */,
+				4CFC3E2F9B8C75D200A62A8BBAC08891 /* Pods-GlanceCalendar-dummy.m */,
+				586FCA58017C31F2855E81FF7941809C /* Pods-GlanceCalendar-frameworks.sh */,
+				BDCECD20A921C479D4183C520217249F /* Pods-GlanceCalendar-resources.sh */,
+				7274380CC438897662975CC4E6926E6C /* Pods-GlanceCalendar-umbrella.h */,
+				12183A3A88090A20A1DDD38DE9DE5F36 /* Pods-GlanceCalendar.debug.xcconfig */,
+				4A883FB364E12B94A1366CD19598CF21 /* Pods-GlanceCalendar.release.xcconfig */,
+			);
+			name = "Pods-GlanceCalendar";
+			path = "Target Support Files/Pods-GlanceCalendar";
 			sourceTree = "<group>";
 		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
@@ -128,6 +177,15 @@
 			path = SwiftMoment;
 			sourceTree = "<group>";
 		};
+		6E81EEB50A2770258929AA208739F4D3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3098F4C6592DBDB04482844216B93AEF /* Pods-GlanceCalendar */,
+				E30A53E45BEECA4FFAB2053616182CB2 /* Pods-GlanceCalendarTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		7D6A10B884F5DBB0EEF3268E2B769AAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,27 +200,27 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
 				41F529E46552644349A27BD4E96D69BF /* Pods */,
-				FEEAF27A1B0DAAFD30D3FB30C28D166F /* Products */,
-				28997C1DF78E43346E2D66D74A69FF62 /* Targets Support Files */,
+				30888981CF6C89157B9BC7354352FEB2 /* Products */,
+				6E81EEB50A2770258929AA208739F4D3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D97277BEFE4C3528A85BC3126393CFA1 /* Pods-GlanceCalendar */ = {
+		E30A53E45BEECA4FFAB2053616182CB2 /* Pods-GlanceCalendarTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC3853EBB0999304FFC7F0EED1307774 /* Info.plist */,
-				703F758939152593D53D29560761AB3D /* Pods-GlanceCalendar.modulemap */,
-				9B008148243DECEE3D70A41F2AC6D37E /* Pods-GlanceCalendar-acknowledgements.markdown */,
-				4C2BEE57B27F833642BAD54D62C70A16 /* Pods-GlanceCalendar-acknowledgements.plist */,
-				3D4C02CA44F88331B16AE1B46DD6DDCF /* Pods-GlanceCalendar-dummy.m */,
-				A8F3101C6B2B305C90AEBEEF7B4D7715 /* Pods-GlanceCalendar-frameworks.sh */,
-				3519BFED445D2579F32D86BC763E40D8 /* Pods-GlanceCalendar-resources.sh */,
-				10A88FC0AC3A497B8948A03A8F7302EC /* Pods-GlanceCalendar-umbrella.h */,
-				EC9483A7F8C401064227E00165F75C3E /* Pods-GlanceCalendar.debug.xcconfig */,
-				F185B71BD15639C1D9CC11B745DCFBE4 /* Pods-GlanceCalendar.release.xcconfig */,
+				288F2A27544024E87A7C891C67CBB6DA /* Info.plist */,
+				29AFE0D8F91BD35D4FE06CD7AB363EE4 /* Pods-GlanceCalendarTests.modulemap */,
+				41ACD80E51FA1DE9BFB509083E0E629F /* Pods-GlanceCalendarTests-acknowledgements.markdown */,
+				5CE11483C98D2D8F3FE8F234254F028B /* Pods-GlanceCalendarTests-acknowledgements.plist */,
+				0936417B875C1EBE438A4572AD53C6B6 /* Pods-GlanceCalendarTests-dummy.m */,
+				35B282B6FA8F04653AA1DAE6BB1A4CA6 /* Pods-GlanceCalendarTests-frameworks.sh */,
+				CD6C242BC84858E5490A00A860E94DBA /* Pods-GlanceCalendarTests-resources.sh */,
+				1B083059F3547D345B4F2A32CF7DD12C /* Pods-GlanceCalendarTests-umbrella.h */,
+				3824B46931403A8E0AE984ED39187870 /* Pods-GlanceCalendarTests.debug.xcconfig */,
+				E417B16CE0B4D0B948ABAA1E0829A414 /* Pods-GlanceCalendarTests.release.xcconfig */,
 			);
-			name = "Pods-GlanceCalendar";
-			path = "Target Support Files/Pods-GlanceCalendar";
+			name = "Pods-GlanceCalendarTests";
+			path = "Target Support Files/Pods-GlanceCalendarTests";
 			sourceTree = "<group>";
 		};
 		FA7AC8429882A95AA0810A9DCDED54FF /* OS X */ = {
@@ -171,15 +229,6 @@
 				DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */,
 			);
 			name = "OS X";
-			sourceTree = "<group>";
-		};
-		FEEAF27A1B0DAAFD30D3FB30C28D166F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				87A50A98BB533172F5B761C1385F851F /* Pods_GlanceCalendar.framework */,
-				93315B73EF03846126EAA4344A3D663F /* SwiftMoment.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FFC0370A30E5BA3949D050FEEC0466A3 /* Support Files */ = {
@@ -216,6 +265,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCED71A3BD65C1FE15A32357E3613FE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD557B0B8C14D2B684C5C68DD7410985 /* Pods-GlanceCalendarTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -234,7 +291,25 @@
 			);
 			name = "Pods-GlanceCalendar";
 			productName = "Pods-GlanceCalendar";
-			productReference = 87A50A98BB533172F5B761C1385F851F /* Pods_GlanceCalendar.framework */;
+			productReference = 53FF894289FC98B6AD779DC49DB30D07 /* Pods_GlanceCalendar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E58DBB85A0430A32109A1FBFB46D1467 /* Pods-GlanceCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B6D16C44381B7AD443194E16D80F0C /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendarTests" */;
+			buildPhases = (
+				7C80375B5862B873A67519861D0FB225 /* Sources */,
+				8E8F1C446E4586466F68DF59676E3015 /* Frameworks */,
+				CCED71A3BD65C1FE15A32357E3613FE7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				384A1F0D6613AEC6A1AF43C05BFD6329 /* PBXTargetDependency */,
+			);
+			name = "Pods-GlanceCalendarTests";
+			productName = "Pods-GlanceCalendarTests";
+			productReference = FCB46DD9F5E3A8582781E90BFCBD724A /* Pods_GlanceCalendarTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F2DF7028EDBAA6CF146C9570D1E6420B /* SwiftMoment */ = {
@@ -252,7 +327,7 @@
 			);
 			name = SwiftMoment;
 			productName = SwiftMoment;
-			productReference = 93315B73EF03846126EAA4344A3D663F /* SwiftMoment.framework */;
+			productReference = 2CBC0603937C0A9621D368E7FD676BF6 /* SwiftMoment.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -272,11 +347,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = FEEAF27A1B0DAAFD30D3FB30C28D166F /* Products */;
+			productRefGroup = 30888981CF6C89157B9BC7354352FEB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				68E5051FB096EC5D92D87B6C3DFD5442 /* Pods-GlanceCalendar */,
+				E58DBB85A0430A32109A1FBFB46D1467 /* Pods-GlanceCalendarTests */,
 				F2DF7028EDBAA6CF146C9570D1E6420B /* SwiftMoment */,
 			);
 		};
@@ -294,6 +370,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7C80375B5862B873A67519861D0FB225 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BB9F4C93CFD4CD2FD0BDDF12200AC2 /* Pods-GlanceCalendarTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1C0A885228822A3979EE4ABBF87E47F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +409,12 @@
 			name = SwiftMoment;
 			target = F2DF7028EDBAA6CF146C9570D1E6420B /* SwiftMoment */;
 			targetProxy = 88897B15B63B31970B7CB0A4C44D28BE /* PBXContainerItemProxy */;
+		};
+		384A1F0D6613AEC6A1AF43C05BFD6329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GlanceCalendar";
+			target = 68E5051FB096EC5D92D87B6C3DFD5442 /* Pods-GlanceCalendar */;
+			targetProxy = 93A5A4CBA005236FA40571A900924FA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -386,6 +476,45 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		2E856A0FC23F8304B4C88084A26557FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3824B46931403A8E0AE984ED39187870 /* Pods-GlanceCalendarTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendarTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		419A79E7ECF941AE39D5A62F953545FC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -490,7 +619,7 @@
 		};
 		8B8FBDF6AA6165460B9D8954DDB69756 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC9483A7F8C401064227E00165F75C3E /* Pods-GlanceCalendar.debug.xcconfig */;
+			baseConfigurationReference = 12183A3A88090A20A1DDD38DE9DE5F36 /* Pods-GlanceCalendar.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -567,9 +696,48 @@
 			};
 			name = Release;
 		};
+		D0218A03F1E25EEA236B87A8BB16B386 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E417B16CE0B4D0B948ABAA1E0829A414 /* Pods-GlanceCalendarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendarTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F85237482950DF7A5BFAB4FD42321288 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F185B71BD15639C1D9CC11B745DCFBE4 /* Pods-GlanceCalendar.release.xcconfig */;
+			baseConfigurationReference = 4A883FB364E12B94A1366CD19598CF21 /* Pods-GlanceCalendar.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -633,6 +801,15 @@
 			buildConfigurations = (
 				822B7102BBE44F4B911960928BE7992D /* Debug */,
 				1C319FE8FEF78C160E1BFEB270E25F16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1B6D16C44381B7AD443194E16D80F0C /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E856A0FC23F8304B4C88084A26557FA /* Debug */,
+				D0218A03F1E25EEA236B87A8BB16B386 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
