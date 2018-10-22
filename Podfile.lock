@@ -1,0 +1,16 @@
+PODS:
+  - SwiftMoment (0.7)
+
+DEPENDENCIES:
+  - SwiftMoment
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftMoment
+
+SPEC CHECKSUMS:
+  SwiftMoment: dc6dd27012e267819104cbb03f74ff9192dd0b42
+
+PODFILE CHECKSUM: ee1031dc6bf2c1d7cbf655fd62af59e06e2c38d7
+
+COCOAPODS: 1.5.3

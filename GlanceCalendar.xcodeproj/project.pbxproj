@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15F207EF0F2BC9E3C4B5E387 /* Pods_GlanceCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */; };
 		49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E3F217D2C9C007C27ED /* AppDelegate.swift */; };
 		49004E42217D2C9C007C27ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* ViewController.swift */; };
 		49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49004E43217D2C9D007C27ED /* Assets.xcassets */; };
@@ -14,9 +15,12 @@
 		49004E50217D2E55007C27ED /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E4F217D2E55007C27ED /* DateExtensions.swift */; };
 		49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E57217D57C7007C27ED /* CalendarViewController.swift */; };
 		49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49004E58217D57C7007C27ED /* CalendarViewController.xib */; };
+		49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E5C217D6522007C27ED /* CalendarGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31131F285E183DEB0DFBBC34 /* Pods-GlanceCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 		49004E3C217D2C9C007C27ED /* GlanceCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlanceCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49004E3F217D2C9C007C27ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49004E41217D2C9C007C27ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +31,8 @@
 		49004E4F217D2E55007C27ED /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		49004E57217D57C7007C27ED /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		49004E58217D57C7007C27ED /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		49004E5C217D6522007C27ED /* CalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGrid.swift; sourceTree = "<group>"; };
+		70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F207EF0F2BC9E3C4B5E387 /* Pods_GlanceCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +52,8 @@
 			children = (
 				49004E3E217D2C9C007C27ED /* GlanceCalendar */,
 				49004E3D217D2C9C007C27ED /* Products */,
+				F7023350DC027CE6A9390050 /* Pods */,
+				C9B3933A127766A7564194CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,8 +77,26 @@
 				49004E4F217D2E55007C27ED /* DateExtensions.swift */,
 				49004E57217D57C7007C27ED /* CalendarViewController.swift */,
 				49004E58217D57C7007C27ED /* CalendarViewController.xib */,
+				49004E5C217D6522007C27ED /* CalendarGrid.swift */,
 			);
 			path = GlanceCalendar;
+			sourceTree = "<group>";
+		};
+		C9B3933A127766A7564194CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7023350DC027CE6A9390050 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31131F285E183DEB0DFBBC34 /* Pods-GlanceCalendar.debug.xcconfig */,
+				70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49004E4C217D2C9D007C27ED /* Build configuration list for PBXNativeTarget "GlanceCalendar" */;
 			buildPhases = (
+				C29D1578160D994D562973BB /* [CP] Check Pods Manifest.lock */,
 				49004E38217D2C9C007C27ED /* Sources */,
 				49004E39217D2C9C007C27ED /* Frameworks */,
 				49004E3A217D2C9C007C27ED /* Resources */,
+				4A8B8C85033E39E739F0FE2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +167,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A8B8C85033E39E739F0FE2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftMoment/SwiftMoment.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMoment.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C29D1578160D994D562973BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GlanceCalendar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49004E38217D2C9C007C27ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -147,6 +215,7 @@
 				49004E42217D2C9C007C27ED /* ViewController.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
 				49004E50217D2E55007C27ED /* DateExtensions.swift in Sources */,
+				49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +350,7 @@
 		};
 		49004E4D217D2C9D007C27ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31131F285E183DEB0DFBBC34 /* Pods-GlanceCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GlanceCalendar/GlanceCalendar.entitlements;
@@ -300,6 +370,7 @@
 		};
 		49004E4E217D2C9D007C27ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GlanceCalendar/GlanceCalendar.entitlements;
