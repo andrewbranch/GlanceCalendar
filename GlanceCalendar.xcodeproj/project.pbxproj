@@ -11,6 +11,9 @@
 		49004E42217D2C9C007C27ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* ViewController.swift */; };
 		49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49004E43217D2C9D007C27ED /* Assets.xcassets */; };
 		49004E47217D2C9D007C27ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49004E45217D2C9D007C27ED /* Main.storyboard */; };
+		49004E50217D2E55007C27ED /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E4F217D2E55007C27ED /* DateExtensions.swift */; };
+		49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E57217D57C7007C27ED /* CalendarViewController.swift */; };
+		49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49004E58217D57C7007C27ED /* CalendarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		49004E46217D2C9D007C27ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49004E48217D2C9D007C27ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49004E49217D2C9D007C27ED /* GlanceCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlanceCalendar.entitlements; sourceTree = "<group>"; };
+		49004E4F217D2E55007C27ED /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		49004E57217D57C7007C27ED /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		49004E58217D57C7007C27ED /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				49004E45217D2C9D007C27ED /* Main.storyboard */,
 				49004E48217D2C9D007C27ED /* Info.plist */,
 				49004E49217D2C9D007C27ED /* GlanceCalendar.entitlements */,
+				49004E4F217D2E55007C27ED /* DateExtensions.swift */,
+				49004E57217D57C7007C27ED /* CalendarViewController.swift */,
+				49004E58217D57C7007C27ED /* CalendarViewController.xib */,
 			);
 			path = GlanceCalendar;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */,
 				49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */,
 				49004E47217D2C9D007C27ED /* Main.storyboard in Resources */,
 			);
@@ -133,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */,
 				49004E42217D2C9C007C27ED /* ViewController.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
+				49004E50217D2E55007C27ED /* DateExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
