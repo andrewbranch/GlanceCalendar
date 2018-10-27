@@ -18,7 +18,6 @@
 		49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E5C217D6522007C27ED /* CalendarGrid.swift */; };
 		494109F0217D6EB800DE2B45 /* CalendarGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */; };
 		494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */; };
-		494109FC217D798D00DE2B45 /* CalendarDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494109FA217D798D00DE2B45 /* CalendarDayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridTests.swift; sourceTree = "<group>"; };
 		494109F1217D6EB800DE2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayViewController.swift; sourceTree = "<group>"; };
-		494109FA217D798D00DE2B45 /* CalendarDayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDayViewController.xib; sourceTree = "<group>"; };
 		4CB80A895BB6AA85D55B08AB /* Pods-GlanceCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,7 +106,6 @@
 				49004E58217D57C7007C27ED /* CalendarViewController.xib */,
 				49004E5C217D6522007C27ED /* CalendarGrid.swift */,
 				494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */,
-				494109FA217D798D00DE2B45 /* CalendarDayViewController.xib */,
 			);
 			path = GlanceCalendar;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */,
-				494109FC217D798D00DE2B45 /* CalendarDayViewController.xib in Resources */,
 				49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */,
 				49004E47217D2C9D007C27ED /* Main.storyboard in Resources */,
 			);

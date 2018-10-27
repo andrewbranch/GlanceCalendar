@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         
         // Bizarrely, the default frame puts the text 1px higher than the system clock
         button.frame.size.height -= 1
+        button.cell?.controlView?.addSubview(NSView(frame: button.frame.insetBy(dx: 0, dy: -1)))
         
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: ""))
@@ -40,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         calendarMenuItem.view = calendarViewController.view
         menu.addItem(calendarMenuItem)
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Open Date & Time Preferences…", action: #selector(openDateTimeSettings), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Date & Time Preferences…", action: #selector(openDateTimeSettings), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         menu.delegate = self
         statusItem.menu = menu
@@ -65,7 +66,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     func menuWillOpen(_ menu: NSMenu) {
-        calendarViewController.view.frame.size.width = menu.size.width
         menuIsOpen = true
         updateTime()
     }

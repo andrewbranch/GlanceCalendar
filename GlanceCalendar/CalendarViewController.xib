@@ -8,28 +8,38 @@
         <customObject id="-2" userLabel="File's Owner" customClass="CalendarViewController" customModule="GlanceCalendar" customModuleProvider="target">
             <connections>
                 <outlet property="insetView" destination="wgb-3p-Qyc" id="cvq-8R-Xul"/>
+                <outlet property="monthLabel" destination="NBJ-xd-cVC" id="Prj-E2-eIl"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="256" height="200"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="212"/>
             <subviews>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="wgb-3p-Qyc">
-                    <rect key="frame" x="20" y="8" width="216" height="184"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="216" id="2Yi-QX-LjW"/>
-                    </constraints>
+                <customView placeholderIntrinsicWidth="216" placeholderIntrinsicHeight="168" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-3p-Qyc">
+                    <rect key="frame" x="16" y="4" width="216" height="180"/>
                 </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NBJ-xd-cVC">
+                    <rect key="frame" x="18" y="188" width="43" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="8ME-r6-bjH"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Month" id="8QZ-Kr-757">
+                        <font key="font" size="13" name="HelveticaNeue-Medium"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="wgb-3p-Qyc" secondAttribute="bottom" constant="8" id="2o5-yd-upw"/>
-                <constraint firstItem="wgb-3p-Qyc" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="iGc-PT-Jrh"/>
-                <constraint firstItem="wgb-3p-Qyc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="qJO-aZ-rNS"/>
+                <constraint firstAttribute="bottom" secondItem="wgb-3p-Qyc" secondAttribute="bottom" constant="4" id="2o5-yd-upw"/>
+                <constraint firstItem="wgb-3p-Qyc" firstAttribute="leading" secondItem="NBJ-xd-cVC" secondAttribute="leading" constant="-4" id="km2-Ls-QN7"/>
+                <constraint firstItem="NBJ-xd-cVC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="lCA-Pd-WfZ"/>
+                <constraint firstItem="NBJ-xd-cVC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="oeI-fD-FFN"/>
+                <constraint firstItem="wgb-3p-Qyc" firstAttribute="top" secondItem="NBJ-xd-cVC" secondAttribute="bottom" constant="4" id="qzU-3l-DDq"/>
             </constraints>
-            <point key="canvasLocation" x="131" y="154"/>
+            <point key="canvasLocation" x="131" y="164"/>
         </customView>
     </objects>
 </document>
