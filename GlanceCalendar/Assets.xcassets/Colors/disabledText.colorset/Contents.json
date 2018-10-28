@@ -7,7 +7,7 @@
     {
       "idiom" : "universal",
       "color" : {
-        "reference" : "secondaryLabelColor"
+        "reference" : "tertiaryLabelColor"
       }
     }
   ]
