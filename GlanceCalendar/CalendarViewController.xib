@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,28 +19,33 @@
             <rect key="frame" x="0.0" y="0.0" width="256" height="212"/>
             <subviews>
                 <customView placeholderIntrinsicWidth="216" placeholderIntrinsicHeight="168" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-3p-Qyc">
-                    <rect key="frame" x="16" y="4" width="216" height="180"/>
+                    <rect key="frame" x="16" y="5" width="216" height="178"/>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NBJ-xd-cVC">
-                    <rect key="frame" x="18" y="188" width="43" height="20"/>
+                    <rect key="frame" x="18" y="188" width="47" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="8ME-r6-bjH"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Month" id="8QZ-Kr-757">
-                        <font key="font" size="13" name="HelveticaNeue-Medium"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <font key="font" metaFont="systemMedium" size="14"/>
+                        <color key="textColor" name="primaryText"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="wgb-3p-Qyc" secondAttribute="bottom" constant="4" id="2o5-yd-upw"/>
+                <constraint firstAttribute="bottom" secondItem="wgb-3p-Qyc" secondAttribute="bottom" constant="5" id="2o5-yd-upw"/>
                 <constraint firstItem="wgb-3p-Qyc" firstAttribute="leading" secondItem="NBJ-xd-cVC" secondAttribute="leading" constant="-4" id="km2-Ls-QN7"/>
                 <constraint firstItem="NBJ-xd-cVC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="lCA-Pd-WfZ"/>
                 <constraint firstItem="NBJ-xd-cVC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="oeI-fD-FFN"/>
-                <constraint firstItem="wgb-3p-Qyc" firstAttribute="top" secondItem="NBJ-xd-cVC" secondAttribute="bottom" constant="4" id="qzU-3l-DDq"/>
+                <constraint firstItem="wgb-3p-Qyc" firstAttribute="top" secondItem="NBJ-xd-cVC" secondAttribute="bottom" constant="5" id="qzU-3l-DDq"/>
             </constraints>
             <point key="canvasLocation" x="131" y="164"/>
         </customView>
     </objects>
+    <resources>
+        <namedColor name="primaryText">
+            <color name="labelColor" catalog="System" colorSpace="catalog"/>
+        </namedColor>
+    </resources>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15F207EF0F2BC9E3C4B5E387 /* Pods_GlanceCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */; };
+		490022B621857CA10010D83A /* NSColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022B421857CA10010D83A /* NSColor+Custom.swift */; };
 		49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E3F217D2C9C007C27ED /* AppDelegate.swift */; };
 		49004E42217D2C9C007C27ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* ViewController.swift */; };
 		49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49004E43217D2C9D007C27ED /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31131F285E183DEB0DFBBC34 /* Pods-GlanceCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 		3621AB4754AC36A3F17AE6EA /* Pods-GlanceCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		490022B421857CA10010D83A /* NSColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Custom.swift"; sourceTree = "<group>"; };
 		49004E3C217D2C9C007C27ED /* GlanceCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlanceCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49004E3F217D2C9C007C27ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49004E41217D2C9C007C27ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,17 +97,18 @@
 		49004E3E217D2C9C007C27ED /* GlanceCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				49004E43217D2C9D007C27ED /* Assets.xcassets */,
+				49004E49217D2C9D007C27ED /* GlanceCalendar.entitlements */,
 				49004E3F217D2C9C007C27ED /* AppDelegate.swift */,
 				49004E41217D2C9C007C27ED /* ViewController.swift */,
-				49004E43217D2C9D007C27ED /* Assets.xcassets */,
 				49004E45217D2C9D007C27ED /* Main.storyboard */,
 				49004E48217D2C9D007C27ED /* Info.plist */,
-				49004E49217D2C9D007C27ED /* GlanceCalendar.entitlements */,
 				49004E4F217D2E55007C27ED /* DateExtensions.swift */,
 				49004E57217D57C7007C27ED /* CalendarViewController.swift */,
 				49004E58217D57C7007C27ED /* CalendarViewController.xib */,
 				49004E5C217D6522007C27ED /* CalendarGrid.swift */,
 				494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */,
+				490022B421857CA10010D83A /* NSColor+Custom.swift */,
 			);
 			path = GlanceCalendar;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				49004E42217D2C9C007C27ED /* ViewController.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
 				49004E50217D2E55007C27ED /* DateExtensions.swift in Sources */,
+				490022B621857CA10010D83A /* NSColor+Custom.swift in Sources */,
 				49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(NSMenuItem.separator())
         let calendarMenuItem = NSMenuItem()
         calendarMenuItem.view = calendarViewController.view
+        
         menu.addItem(calendarMenuItem)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Date & Time Preferences…", action: #selector(openDateTimeSettings), keyEquivalent: ""))
