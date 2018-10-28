@@ -16,31 +16,42 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="256" height="212"/>
+            <rect key="frame" x="0.0" y="0.0" width="256" height="208"/>
             <subviews>
                 <customView placeholderIntrinsicWidth="216" placeholderIntrinsicHeight="168" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-3p-Qyc">
-                    <rect key="frame" x="16" y="5" width="216" height="178"/>
+                    <rect key="frame" x="16" y="5" width="216" height="170"/>
                 </customView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NBJ-xd-cVC">
-                    <rect key="frame" x="18" y="188" width="47" height="20"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="dgW-Ai-dWC" customClass="CalendarHeaderView" customModule="GlanceCalendar" customModuleProvider="target">
+                    <rect key="frame" x="20" y="180" width="212" height="20"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NBJ-xd-cVC">
+                            <rect key="frame" x="-2" y="0.0" width="47" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="8ME-r6-bjH"/>
+                            </constraints>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Month" id="8QZ-Kr-757">
+                                <font key="font" metaFont="systemMedium" size="14"/>
+                                <color key="textColor" name="primaryText"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="8ME-r6-bjH"/>
+                        <constraint firstAttribute="height" constant="20" id="KMD-vV-RXb"/>
+                        <constraint firstItem="NBJ-xd-cVC" firstAttribute="leading" secondItem="dgW-Ai-dWC" secondAttribute="leading" id="Yvy-Yh-amf"/>
+                        <constraint firstItem="NBJ-xd-cVC" firstAttribute="centerY" secondItem="dgW-Ai-dWC" secondAttribute="centerY" id="xhc-0F-M3R"/>
                     </constraints>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Month" id="8QZ-Kr-757">
-                        <font key="font" metaFont="systemMedium" size="14"/>
-                        <color key="textColor" name="primaryText"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
+                </customView>
             </subviews>
             <constraints>
+                <constraint firstItem="dgW-Ai-dWC" firstAttribute="trailing" secondItem="wgb-3p-Qyc" secondAttribute="trailing" id="1Fi-xq-lcu"/>
                 <constraint firstAttribute="bottom" secondItem="wgb-3p-Qyc" secondAttribute="bottom" constant="5" id="2o5-yd-upw"/>
-                <constraint firstItem="wgb-3p-Qyc" firstAttribute="leading" secondItem="NBJ-xd-cVC" secondAttribute="leading" constant="-4" id="km2-Ls-QN7"/>
-                <constraint firstItem="NBJ-xd-cVC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="lCA-Pd-WfZ"/>
-                <constraint firstItem="NBJ-xd-cVC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="oeI-fD-FFN"/>
-                <constraint firstItem="wgb-3p-Qyc" firstAttribute="top" secondItem="NBJ-xd-cVC" secondAttribute="bottom" constant="5" id="qzU-3l-DDq"/>
+                <constraint firstItem="dgW-Ai-dWC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="5Ja-43-HKm"/>
+                <constraint firstItem="wgb-3p-Qyc" firstAttribute="top" secondItem="dgW-Ai-dWC" secondAttribute="bottom" constant="5" id="L1U-Az-wT7"/>
+                <constraint firstItem="dgW-Ai-dWC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="RJw-Pz-8lf"/>
+                <constraint firstItem="wgb-3p-Qyc" firstAttribute="leading" secondItem="dgW-Ai-dWC" secondAttribute="leading" constant="-4" id="diw-jI-B1H"/>
             </constraints>
-            <point key="canvasLocation" x="131" y="164"/>
+            <point key="canvasLocation" x="131" y="166.5"/>
         </customView>
     </objects>
     <resources>
