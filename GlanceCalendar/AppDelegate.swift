@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
@@ -19,6 +20,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var menuIsOpen = false
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let launcherAppId = "com.wheream.io.GlanceCalendarLauncher"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = runningApps.contains { $0.bundleIdentifier == launcherAppId }
+
+        if SMLoginItemSetEnabled(launcherAppId as CFString, true) {
+            NSLog("Successfully scheduled launcher to run on login")
+        }
+        
+        if isRunning {
+            DistributedNotificationCenter.default().post(
+                name: .killLauncher,
+                object: Bundle.main.bundleIdentifier!
+            )
+        }
+
         guard let button = statusItem.button else {
             return
         }

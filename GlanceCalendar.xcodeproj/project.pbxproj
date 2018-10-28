@@ -10,6 +10,8 @@
 		15F207EF0F2BC9E3C4B5E387 /* Pods_GlanceCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */; };
 		490022B621857CA10010D83A /* NSColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022B421857CA10010D83A /* NSColor+Custom.swift */; };
 		490022BD218619FA0010D83A /* CalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022BC218619FA0010D83A /* CalendarDayView.swift */; };
+		490022D721862D2C0010D83A /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490022D621862D2C0010D83A /* ServiceManagement.framework */; };
+		490022DB218630090010D83A /* Notification.Name+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022DA218630090010D83A /* Notification.Name+Custom.swift */; };
 		49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E3F217D2C9C007C27ED /* AppDelegate.swift */; };
 		49004E42217D2C9C007C27ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* ViewController.swift */; };
 		49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49004E43217D2C9D007C27ED /* Assets.xcassets */; };
@@ -20,6 +22,14 @@
 		49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E5C217D6522007C27ED /* CalendarGrid.swift */; };
 		494109F0217D6EB800DE2B45 /* CalendarGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */; };
 		494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */; };
+		494838E62186531B00B3D4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494838E52186531B00B3D4F9 /* AppDelegate.swift */; };
+		494838EA2186531D00B3D4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494838E92186531D00B3D4F9 /* Assets.xcassets */; };
+		494838ED2186531D00B3D4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494838EB2186531D00B3D4F9 /* Main.storyboard */; };
+		494838F3218653BF00B3D4F9 /* Notification.Name+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022DA218630090010D83A /* Notification.Name+Custom.swift */; };
+		494838F4218653DF00B3D4F9 /* GlanceCalendarLauncher.app in Resources */ = {isa = PBXBuildFile; fileRef = 494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */; };
+		494838F7218653F400B3D4F9 /* GlanceCalendarLauncher.app in Resources */ = {isa = PBXBuildFile; fileRef = 494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */; };
+		494838F82186540E00B3D4F9 /* GlanceCalendarLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4724C97C4EAF528F95D082 /* Pods_GlanceCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +40,27 @@
 			remoteGlobalIDString = 49004E3B217D2C9C007C27ED;
 			remoteInfo = GlanceCalendar;
 		};
+		494838F5218653DF00B3D4F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49004E34217D2C9C007C27ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 494838E22186531B00B3D4F9;
+			remoteInfo = GlanceCalendarLauncher;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		490022D821862D650010D83A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				494838F82186540E00B3D4F9 /* GlanceCalendarLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +68,8 @@
 		3621AB4754AC36A3F17AE6EA /* Pods-GlanceCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		490022B421857CA10010D83A /* NSColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Custom.swift"; sourceTree = "<group>"; };
 		490022BC218619FA0010D83A /* CalendarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
+		490022D621862D2C0010D83A /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		490022DA218630090010D83A /* Notification.Name+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Custom.swift"; sourceTree = "<group>"; };
 		49004E3C217D2C9C007C27ED /* GlanceCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlanceCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49004E3F217D2C9C007C27ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49004E41217D2C9C007C27ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,8 +85,15 @@
 		494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridTests.swift; sourceTree = "<group>"; };
 		494109F1217D6EB800DE2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayViewController.swift; sourceTree = "<group>"; };
+		494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlanceCalendarLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		494838E52186531B00B3D4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		494838E92186531D00B3D4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		494838EC2186531D00B3D4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		494838EE2186531D00B3D4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494838EF2186531D00B3D4F9 /* GlanceCalendarLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlanceCalendarLauncher.entitlements; sourceTree = "<group>"; };
 		4CB80A895BB6AA85D55B08AB /* Pods-GlanceCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +101,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490022D721862D2C0010D83A /* ServiceManagement.framework in Frameworks */,
 				15F207EF0F2BC9E3C4B5E387 /* Pods_GlanceCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		494109EA217D6EB800DE2B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4724C97C4EAF528F95D082 /* Pods_GlanceCalendarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494838E02186531B00B3D4F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,8 +127,10 @@
 		49004E33217D2C9C007C27ED = {
 			isa = PBXGroup;
 			children = (
+				490022DA218630090010D83A /* Notification.Name+Custom.swift */,
 				49004E3E217D2C9C007C27ED /* GlanceCalendar */,
 				494109EE217D6EB800DE2B45 /* GlanceCalendarTests */,
+				494838E42186531B00B3D4F9 /* GlanceCalendarLauncher */,
 				49004E3D217D2C9C007C27ED /* Products */,
 				F7023350DC027CE6A9390050 /* Pods */,
 				C9B3933A127766A7564194CC /* Frameworks */,
@@ -92,6 +142,7 @@
 			children = (
 				49004E3C217D2C9C007C27ED /* GlanceCalendar.app */,
 				494109ED217D6EB800DE2B45 /* GlanceCalendarTests.xctest */,
+				494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,10 +176,24 @@
 			path = GlanceCalendarTests;
 			sourceTree = "<group>";
 		};
+		494838E42186531B00B3D4F9 /* GlanceCalendarLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				494838E52186531B00B3D4F9 /* AppDelegate.swift */,
+				494838E92186531D00B3D4F9 /* Assets.xcassets */,
+				494838EB2186531D00B3D4F9 /* Main.storyboard */,
+				494838EE2186531D00B3D4F9 /* Info.plist */,
+				494838EF2186531D00B3D4F9 /* GlanceCalendarLauncher.entitlements */,
+			);
+			path = GlanceCalendarLauncher;
+			sourceTree = "<group>";
+		};
 		C9B3933A127766A7564194CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				490022D621862D2C0010D83A /* ServiceManagement.framework */,
 				2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */,
+				E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,10 +221,12 @@
 				49004E39217D2C9C007C27ED /* Frameworks */,
 				49004E3A217D2C9C007C27ED /* Resources */,
 				4A8B8C85033E39E739F0FE2F /* [CP] Embed Pods Frameworks */,
+				490022D821862D650010D83A /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				494838F6218653DF00B3D4F9 /* PBXTargetDependency */,
 			);
 			name = GlanceCalendar;
 			productName = GlanceCalendar;
@@ -185,6 +252,23 @@
 			productReference = 494109ED217D6EB800DE2B45 /* GlanceCalendarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		494838E22186531B00B3D4F9 /* GlanceCalendarLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 494838F02186531D00B3D4F9 /* Build configuration list for PBXNativeTarget "GlanceCalendarLauncher" */;
+			buildPhases = (
+				494838DF2186531B00B3D4F9 /* Sources */,
+				494838E02186531B00B3D4F9 /* Frameworks */,
+				494838E12186531B00B3D4F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlanceCalendarLauncher;
+			productName = GlanceCalendarLauncher;
+			productReference = 494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +285,9 @@
 					494109EC217D6EB800DE2B45 = {
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 49004E3B217D2C9C007C27ED;
+					};
+					494838E22186531B00B3D4F9 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -219,6 +306,7 @@
 			targets = (
 				49004E3B217D2C9C007C27ED /* GlanceCalendar */,
 				494109EC217D6EB800DE2B45 /* GlanceCalendarTests */,
+				494838E22186531B00B3D4F9 /* GlanceCalendarLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +319,8 @@
 				49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */,
 				49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */,
 				49004E47217D2C9D007C27ED /* Main.storyboard in Resources */,
+				494838F4218653DF00B3D4F9 /* GlanceCalendarLauncher.app in Resources */,
+				494838F7218653F400B3D4F9 /* GlanceCalendarLauncher.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +328,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494838E12186531B00B3D4F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494838EA2186531D00B3D4F9 /* Assets.xcassets in Resources */,
+				494838ED2186531D00B3D4F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */,
+				490022DB218630090010D83A /* Notification.Name+Custom.swift in Sources */,
 				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
 				49004E42217D2C9C007C27ED /* ViewController.swift in Sources */,
 				490022BD218619FA0010D83A /* CalendarDayView.swift in Sources */,
@@ -324,6 +424,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		494838DF2186531B00B3D4F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494838F3218653BF00B3D4F9 /* Notification.Name+Custom.swift in Sources */,
+				494838E62186531B00B3D4F9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -332,6 +441,11 @@
 			target = 49004E3B217D2C9C007C27ED /* GlanceCalendar */;
 			targetProxy = 494109F2217D6EB800DE2B45 /* PBXContainerItemProxy */;
 		};
+		494838F6218653DF00B3D4F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 494838E22186531B00B3D4F9 /* GlanceCalendarLauncher */;
+			targetProxy = 494838F5218653DF00B3D4F9 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -339,6 +453,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				49004E46217D2C9D007C27ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		494838EB2186531D00B3D4F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494838EC2186531D00B3D4F9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -465,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31131F285E183DEB0DFBBC34 /* Pods-GlanceCalendar.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GlanceCalendar/GlanceCalendar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -487,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GlanceCalendar/GlanceCalendar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -553,6 +677,48 @@
 			};
 			name = Release;
 		};
+		494838F12186531D00B3D4F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GlanceCalendarLauncher/GlanceCalendarLauncher.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7U83U369J;
+				INFOPLIST_FILE = GlanceCalendarLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wheream.io.GlanceCalendarLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		494838F22186531D00B3D4F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GlanceCalendarLauncher/GlanceCalendarLauncher.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7U83U369J;
+				INFOPLIST_FILE = GlanceCalendarLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wheream.io.GlanceCalendarLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +745,15 @@
 			buildConfigurations = (
 				494109F5217D6EB800DE2B45 /* Debug */,
 				494109F6217D6EB800DE2B45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		494838F02186531D00B3D4F9 /* Build configuration list for PBXNativeTarget "GlanceCalendarLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494838F12186531D00B3D4F9 /* Debug */,
+				494838F22186531D00B3D4F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
