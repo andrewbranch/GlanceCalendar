@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CalendarViewController" customModule="GlanceCalendar" customModuleProvider="target">
             <connections>
+                <outlet property="headerView" destination="dgW-Ai-dWC" id="1cd-oK-m4F"/>
                 <outlet property="insetView" destination="wgb-3p-Qyc" id="cvq-8R-Xul"/>
                 <outlet property="monthLabel" destination="NBJ-xd-cVC" id="Prj-E2-eIl"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -19,13 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="256" height="208"/>
             <subviews>
                 <customView placeholderIntrinsicWidth="216" placeholderIntrinsicHeight="168" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-3p-Qyc">
-                    <rect key="frame" x="16" y="5" width="216" height="170"/>
+                    <rect key="frame" x="16" y="5" width="216" height="174"/>
                 </customView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="dgW-Ai-dWC" customClass="CalendarHeaderView" customModule="GlanceCalendar" customModuleProvider="target">
-                    <rect key="frame" x="20" y="180" width="212" height="20"/>
+                    <rect key="frame" x="20" y="184" width="208" height="16"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NBJ-xd-cVC">
-                            <rect key="frame" x="-2" y="0.0" width="47" height="20"/>
+                            <rect key="frame" x="-2" y="-2" width="47" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="8ME-r6-bjH"/>
                             </constraints>
@@ -37,14 +38,14 @@
                         </textField>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="KMD-vV-RXb"/>
+                        <constraint firstAttribute="height" constant="16" id="KMD-vV-RXb"/>
                         <constraint firstItem="NBJ-xd-cVC" firstAttribute="leading" secondItem="dgW-Ai-dWC" secondAttribute="leading" id="Yvy-Yh-amf"/>
                         <constraint firstItem="NBJ-xd-cVC" firstAttribute="centerY" secondItem="dgW-Ai-dWC" secondAttribute="centerY" id="xhc-0F-M3R"/>
                     </constraints>
                 </customView>
             </subviews>
             <constraints>
-                <constraint firstItem="dgW-Ai-dWC" firstAttribute="trailing" secondItem="wgb-3p-Qyc" secondAttribute="trailing" id="1Fi-xq-lcu"/>
+                <constraint firstItem="dgW-Ai-dWC" firstAttribute="trailing" secondItem="wgb-3p-Qyc" secondAttribute="trailing" constant="-4" id="1Fi-xq-lcu"/>
                 <constraint firstAttribute="bottom" secondItem="wgb-3p-Qyc" secondAttribute="bottom" constant="5" id="2o5-yd-upw"/>
                 <constraint firstItem="dgW-Ai-dWC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="5Ja-43-HKm"/>
                 <constraint firstItem="wgb-3p-Qyc" firstAttribute="top" secondItem="dgW-Ai-dWC" secondAttribute="bottom" constant="5" id="L1U-Az-wT7"/>
@@ -53,8 +54,17 @@
             </constraints>
             <point key="canvasLocation" x="131" y="166.5"/>
         </customView>
+        <button verticalHuggingPriority="750" id="ocC-t8-Ep3">
+            <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PBt-qx-e7a">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+        </button>
     </objects>
     <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
         <namedColor name="primaryText">
             <color name="labelColor" catalog="System" colorSpace="catalog"/>
         </namedColor>
