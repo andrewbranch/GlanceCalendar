@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     let dateTimeSettingsURL = URL(fileURLWithPath: "/System/Library/PreferencePanes/DateAndTime.prefPane")
     let calendarViewController = CalendarViewController()
     var highlightTitle: NSMutableAttributedString?
+    var title: NSMutableAttributedString?
     var menuIsOpen = false
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -23,16 +24,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
         highlightTitle = NSMutableAttributedString(string: Date.dayOfWeekAndTime(), attributes: [
             .foregroundColor: NSColor.white,
-            .font: NSFont.systemFont(ofSize: button.cell?.font?.pointSize ?? 14, weight: .light)
+            .font: NSFont.systemFont(ofSize: button.cell?.font?.pointSize ?? 14, weight: .light),
+            .baselineOffset: -1
         ])
-        button.title = Date.dayOfWeekAndTime()
+        title = NSMutableAttributedString(string: Date.dayOfWeekAndTime(), attributes: [
+            .baselineOffset: -1
+        ])
         
+        button.attributedTitle = title!
         // Default system clock uses a light weight when highlighted
-        button.attributedAlternateTitle = self.highlightTitle!
-        
-        // Bizarrely, the default frame puts the text 1px higher than the system clock
-        button.frame.size.height -= 1
-        button.cell?.controlView?.addSubview(NSView(frame: button.frame.insetBy(dx: 0, dy: -1)))
+        button.attributedAlternateTitle = highlightTitle!
         
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: ""))
@@ -59,8 +60,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     func updateTime() {
         let timeString = Date.dayOfWeekAndTime()
-        statusItem.button!.title = timeString
+        title!.mutableString.setString(timeString)
         highlightTitle!.mutableString.setString(timeString)
+        statusItem.button!.attributedTitle = title!
         if menuIsOpen {
             statusItem.button!.attributedAlternateTitle = highlightTitle!
         }
@@ -74,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     // After becoming unhighlighted, the text gets stuck kind of bold for some reason
     func menuDidClose(_ menu: NSMenu) {
         menuIsOpen = false
-        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50)) { [weak self] in
             self?.statusItem.button?.setNeedsDisplay(self!.statusItem.button!.bounds)
         }
     }
