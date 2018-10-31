@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let dateTimeSettingsURL = URL(fileURLWithPath: "/System/Library/PreferencePanes/DateAndTime.prefPane")
+    let dateMenuItem = NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: "")
     let calendarViewController = CalendarViewController()
     var highlightTitle: NSMutableAttributedString?
     var title: NSMutableAttributedString?
@@ -52,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         button.attributedAlternateTitle = highlightTitle!
         
         let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: ""))
+        menu.addItem(dateMenuItem)
         menu.addItem(NSMenuItem.separator())
         let calendarMenuItem = NSMenuItem()
         calendarMenuItem.view = calendarViewController.view
@@ -79,6 +80,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         title!.mutableString.setString(timeString)
         highlightTitle!.mutableString.setString(timeString)
         statusItem.button!.attributedTitle = title!
+        dateMenuItem.title = Date.fullDate()
+        calendarViewController.goToToday()
         if menuIsOpen {
             statusItem.button!.attributedAlternateTitle = highlightTitle!
         }

@@ -18,12 +18,19 @@ class CalendarViewController: NSViewController {
     @IBOutlet var insetView: NSView!
     @IBOutlet var headerView: CalendarHeaderView!
     @IBOutlet var monthLabel: NSTextField!
-    var month = moment().month
-    var year = moment().year
-    var dayViewControllers: [CalendarDayViewController]?
-    private lazy var weeks: [[Moment]] = {
-        return calendar.getWeeks(month: month, year: year)
-    }()
+    var date = moment() {
+        didSet {
+            if oldValue.year != date.year || oldValue.month != date.month {
+                updateCalendar()
+            }
+        }
+    }
+
+    private var weeks: [[Moment]] {
+        get {
+            return calendar.getWeeks(month: date.month, year: date.year)
+        }
+    }
 
     init() {
         super.init(nibName: "CalendarViewController", bundle: nil)
@@ -41,7 +48,7 @@ class CalendarViewController: NSViewController {
         widthConstraint.priority = .defaultHigh
         widthConstraint.isActive = true
         
-        monthLabel.stringValue = weeks[1][0].monthName
+        
         let monthControlsContainer = NSView()
         let prevButton = MonthControlButton(imageName: "arrowLeft")
         let todayButton = MonthControlButton(imageName: "dot")
@@ -60,7 +67,21 @@ class CalendarViewController: NSViewController {
         monthControlsContainer.widthAnchor.constraint(equalToConstant: prevButton.frame.width + nextButton.frame.width + todayButton.frame.width + 2 * controlButtonMargin).isActive = true
         monthControlsContainer.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
         monthControlsContainer.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
-        
+
+        updateCalendar()
+    }
+    
+    func setMonth(month: Int, year: Int) {
+        date = moment([year, month])!
+    }
+    
+    func goToToday() {
+        date = moment()
+    }
+    
+    func updateCalendar() {
+        children.removeAll()
+        monthLabel.stringValue = weeks[1][0].monthName
         weeks.enumerated().forEach { week in
             week.element.enumerated().forEach { day in
                 let vc = CalendarDayViewController(
@@ -71,7 +92,7 @@ class CalendarViewController: NSViewController {
                         height: dayViewSize
                     ),
                     date: day.element,
-                    forMonth: month
+                    forMonth: date.month
                 )
                 addChild(vc)
                 insetView.addSubview(vc.view)
@@ -80,10 +101,5 @@ class CalendarViewController: NSViewController {
         // Without this (even with `view.needsLayout = true`), the view flashes in
         // at the wrong size before adjusting when the menu first opens.
         view.layoutSubtreeIfNeeded()
-    }
-    
-    func setMonth(month: Int, year: Int) {
-        self.month = month
-        self.year = year
     }
 }
