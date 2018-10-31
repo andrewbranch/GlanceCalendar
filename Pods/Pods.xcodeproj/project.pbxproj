@@ -7,40 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		098817E25080752A8891AEED837A6C97 /* MomentFromNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2FA04E0E6A231BC826DC0968BD9F54 /* MomentFromNow.swift */; };
-		1FC4E5FAAAE9F5B86205BB203B16452C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		3D51CD92ACE4319972515172A0EEB2ED /* Pods-GlanceCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7274380CC438897662975CC4E6926E6C /* Pods-GlanceCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		428BBBCF85D2646C257373C46FC43DA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0CB53D1FEEF50F34941085574E1BAC /* Extensions.swift */; };
-		585A5C22B25E408073C579823877B08C /* SwiftMoment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C5891FAEA61F3AA70696BFAEF4A79BE /* SwiftMoment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58BB9F4C93CFD4CD2FD0BDDF12200AC2 /* Pods-GlanceCalendarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936417B875C1EBE438A4572AD53C6B6 /* Pods-GlanceCalendarTests-dummy.m */; };
-		640C002C4BE513606CAE5B489C7DAE41 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D541FEDC1F17F848FAD78E9B25E27 /* TimeUnit.swift */; };
-		7BA2334FB2AC83A1E8879A649F77F5F1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		7D9C4DE3F11F274FEFFFFADFB991B26A /* SwiftMoment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7DBABA5FD42D96C8FB3A51D3E18EEE /* SwiftMoment-dummy.m */; };
-		7F1ABD1E31D48187C92C6DE7D0C70B0E /* Pods-GlanceCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC3E2F9B8C75D200A62A8BBAC08891 /* Pods-GlanceCalendar-dummy.m */; };
-		8AA14888FEFF87C76DF09CE1FAC1D16F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B553FC5004F869605B332BAA4B408 /* Operators.swift */; };
-		8E79ED448637121079863302C2F9F721 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C970A80969E00274481CFD48E2DC55 /* Duration.swift */; };
-		92F15974234B30B672A9E2878AB79362 /* LazyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8818D2B40A76462131EE595202FBA238 /* LazyBox.swift */; };
-		B56526715FAC83A8136FF4158CBBC14C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		BD557B0B8C14D2B684C5C68DD7410985 /* Pods-GlanceCalendarTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B083059F3547D345B4F2A32CF7DD12C /* Pods-GlanceCalendarTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE73455A387B3BDB1AC4C69AA0F588CF /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89E4FAF39D74D787CA031B8B597F7A /* Moment.swift */; };
-		E4D4328B68C3DAF2150DF228F74BFDDF /* SwiftMoment.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BABCC09A59B8F1B00A3C732BF27AFC8 /* SwiftMoment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAA38A875089340A67D06EE69665F226 /* MomentFromNow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B6E7BBB21E0C53EE5DD1B48AC59 /* MomentFromNow.bundle */; };
+		1E179D613ACB307473842D46EE8A98C1 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C970A80969E00274481CFD48E2DC55 /* Duration.swift */; };
+		1F4D7650A9D55750C95EB71E4F850279 /* Pods-GlanceCalendarTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B083059F3547D345B4F2A32CF7DD12C /* Pods-GlanceCalendarTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FD789B1462A62DA69D4C44150ABF126 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		583D1CC888EC5A18092C177E67101917 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89E4FAF39D74D787CA031B8B597F7A /* Moment.swift */; };
+		5856F2CBB881F5512D69D254BB3FDCFB /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D541FEDC1F17F848FAD78E9B25E27 /* TimeUnit.swift */; };
+		60A8813302F0D73A5627CDB8ADB849DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		74A6DCD9AB41CCD64F2C962B79861CD6 /* Pods-GlanceCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7274380CC438897662975CC4E6926E6C /* Pods-GlanceCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C3DDF731BA405248892D856EFA37A6A /* SwiftMoment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C5891FAEA61F3AA70696BFAEF4A79BE /* SwiftMoment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CB369121F895666354FA69C5C8237DD /* Pods-GlanceCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC3E2F9B8C75D200A62A8BBAC08891 /* Pods-GlanceCalendar-dummy.m */; };
+		80B278C2FFE9FE3B0CAE852312B107E0 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B553FC5004F869605B332BAA4B408 /* Operators.swift */; };
+		82AE7C5E58721372F67D056C8C7D7166 /* MomentFromNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2FA04E0E6A231BC826DC0968BD9F54 /* MomentFromNow.swift */; };
+		8496973C8469B530C6465E93BE690C52 /* LazyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8818D2B40A76462131EE595202FBA238 /* LazyBox.swift */; };
+		9B468DFD09DE0DD3B3EA3D86B74877B1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0CB53D1FEEF50F34941085574E1BAC /* Extensions.swift */; };
+		9C2C595DDBFFCA72A6F24B1C0307AB2F /* MomentFromNow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B6E7BBB21E0C53EE5DD1B48AC59 /* MomentFromNow.bundle */; };
+		9F1CEB5371B1036877307DCC5B1C2E66 /* SwiftMoment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7DBABA5FD42D96C8FB3A51D3E18EEE /* SwiftMoment-dummy.m */; };
+		A2041468B766231513E0EBE79D6C50F3 /* SwiftMoment.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BABCC09A59B8F1B00A3C732BF27AFC8 /* SwiftMoment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C93BBF7639FF04B5B806B603F1A676A3 /* Pods-GlanceCalendarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936417B875C1EBE438A4572AD53C6B6 /* Pods-GlanceCalendarTests-dummy.m */; };
+		F447A9107D0765D1AB9D762B6A0CE505 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		88897B15B63B31970B7CB0A4C44D28BE /* PBXContainerItemProxy */ = {
+		792988D61A411D9BEC3830CF5ADB788D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F2DF7028EDBAA6CF146C9570D1E6420B;
-			remoteInfo = SwiftMoment;
-		};
-		93A5A4CBA005236FA40571A900924FA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68E5051FB096EC5D92D87B6C3DFD5442;
+			remoteGlobalIDString = C939EE843CC5E484F91A5994EAA7301D;
 			remoteInfo = "Pods-GlanceCalendar";
+		};
+		9C4151E25B27212C5AB8BBC030B4658D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 159D4A805CFD4598CD0FF811F7EFA63A;
+			remoteInfo = SwiftMoment;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,27 +88,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		18E8744242A5EB1D5407ED83FD1AE736 /* Frameworks */ = {
+		1ED729A2F3CE72F79761371ACEAA0F78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56526715FAC83A8136FF4158CBBC14C /* Cocoa.framework in Frameworks */,
+				1FD789B1462A62DA69D4C44150ABF126 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BEFF882FCB09FC3FD19D2A82C4B6E53 /* Frameworks */ = {
+		69CFB07ED51524457ADFD1F4B679C6DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC4E5FAAAE9F5B86205BB203B16452C /* Cocoa.framework in Frameworks */,
+				60A8813302F0D73A5627CDB8ADB849DA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E8F1C446E4586466F68DF59676E3015 /* Frameworks */ = {
+		99C0C0B4FBA8E363AF815834C809CE6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA2334FB2AC83A1E8879A649F77F5F1 /* Cocoa.framework in Frameworks */,
+				F447A9107D0765D1AB9D762B6A0CE505 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,78 +248,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3530F6D125056F7E803812B32CE9ED58 /* Headers */ = {
+		594B251566CA6B1D7796C639BB26901A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585A5C22B25E408073C579823877B08C /* SwiftMoment-umbrella.h in Headers */,
-				E4D4328B68C3DAF2150DF228F74BFDDF /* SwiftMoment.h in Headers */,
+				1F4D7650A9D55750C95EB71E4F850279 /* Pods-GlanceCalendarTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF7527D26BDEC847327F1586C9FA2748 /* Headers */ = {
+		6001A431ACCA5D50DFC21FC4E46C18D3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D51CD92ACE4319972515172A0EEB2ED /* Pods-GlanceCalendar-umbrella.h in Headers */,
+				74A6DCD9AB41CCD64F2C962B79861CD6 /* Pods-GlanceCalendar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCED71A3BD65C1FE15A32357E3613FE7 /* Headers */ = {
+		DC90B334BECCA051F2B7B7E9D1C3AAE2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD557B0B8C14D2B684C5C68DD7410985 /* Pods-GlanceCalendarTests-umbrella.h in Headers */,
+				7C3DDF731BA405248892D856EFA37A6A /* SwiftMoment-umbrella.h in Headers */,
+				A2041468B766231513E0EBE79D6C50F3 /* SwiftMoment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		68E5051FB096EC5D92D87B6C3DFD5442 /* Pods-GlanceCalendar */ = {
+		159D4A805CFD4598CD0FF811F7EFA63A /* SwiftMoment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 096DF79E649F618054D658818D24320E /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendar" */;
+			buildConfigurationList = 781CC55A65EC776DEE674E48BBC7A5ED /* Build configuration list for PBXNativeTarget "SwiftMoment" */;
 			buildPhases = (
-				E1C0A885228822A3979EE4ABBF87E47F /* Sources */,
-				18E8744242A5EB1D5407ED83FD1AE736 /* Frameworks */,
-				AF7527D26BDEC847327F1586C9FA2748 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				116273D6DF9898E9A005DE42CB2F2047 /* PBXTargetDependency */,
-			);
-			name = "Pods-GlanceCalendar";
-			productName = "Pods-GlanceCalendar";
-			productReference = 53FF894289FC98B6AD779DC49DB30D07 /* Pods_GlanceCalendar.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E58DBB85A0430A32109A1FBFB46D1467 /* Pods-GlanceCalendarTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1B6D16C44381B7AD443194E16D80F0C /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendarTests" */;
-			buildPhases = (
-				7C80375B5862B873A67519861D0FB225 /* Sources */,
-				8E8F1C446E4586466F68DF59676E3015 /* Frameworks */,
-				CCED71A3BD65C1FE15A32357E3613FE7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				384A1F0D6613AEC6A1AF43C05BFD6329 /* PBXTargetDependency */,
-			);
-			name = "Pods-GlanceCalendarTests";
-			productName = "Pods-GlanceCalendarTests";
-			productReference = FCB46DD9F5E3A8582781E90BFCBD724A /* Pods_GlanceCalendarTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F2DF7028EDBAA6CF146C9570D1E6420B /* SwiftMoment */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E0616122A11F820FDFE7F07EDBDE1C3 /* Build configuration list for PBXNativeTarget "SwiftMoment" */;
-			buildPhases = (
-				FEAC17B2CC1480128E256FDB4BA77A5C /* Sources */,
-				7BEFF882FCB09FC3FD19D2A82C4B6E53 /* Frameworks */,
-				3530F6D125056F7E803812B32CE9ED58 /* Headers */,
-				FCC636291EBD872F8738E2C3107FB2B8 /* Resources */,
+				DC90B334BECCA051F2B7B7E9D1C3AAE2 /* Headers */,
+				A5AE8DAD47F3A20450E0AE3E3F9F8E38 /* Sources */,
+				1ED729A2F3CE72F79761371ACEAA0F78 /* Frameworks */,
+				BA64ABB6E1FFB52E38664109EA4A819D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -328,6 +292,44 @@
 			name = SwiftMoment;
 			productName = SwiftMoment;
 			productReference = 2CBC0603937C0A9621D368E7FD676BF6 /* SwiftMoment.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A35F5D267BC01929091725E7219E4C5F /* Pods-GlanceCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA3BAE72F675609FA555DC0FDFA855BD /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendarTests" */;
+			buildPhases = (
+				594B251566CA6B1D7796C639BB26901A /* Headers */,
+				20FEB618A808C4DB1EE90D2FF8A13FD7 /* Sources */,
+				99C0C0B4FBA8E363AF815834C809CE6C /* Frameworks */,
+				55C3B32988326939637120DD2FBBBB43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B4110503D9F7FC7D1D6DB6190129141 /* PBXTargetDependency */,
+			);
+			name = "Pods-GlanceCalendarTests";
+			productName = "Pods-GlanceCalendarTests";
+			productReference = FCB46DD9F5E3A8582781E90BFCBD724A /* Pods_GlanceCalendarTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C939EE843CC5E484F91A5994EAA7301D /* Pods-GlanceCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 218ACFD3A6610AEECBFAE4508A6F304A /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendar" */;
+			buildPhases = (
+				6001A431ACCA5D50DFC21FC4E46C18D3 /* Headers */,
+				054BE2016B7BD63B5BCF44BE3BB8DD45 /* Sources */,
+				69CFB07ED51524457ADFD1F4B679C6DE /* Frameworks */,
+				DA442216F2427BAEE064622AF8F002EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				493DC24EE8DD2988ACCFC14101D7D624 /* PBXTargetDependency */,
+			);
+			name = "Pods-GlanceCalendar";
+			productName = "Pods-GlanceCalendar";
+			productReference = 53FF894289FC98B6AD779DC49DB30D07 /* Pods_GlanceCalendar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -351,75 +353,285 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				68E5051FB096EC5D92D87B6C3DFD5442 /* Pods-GlanceCalendar */,
-				E58DBB85A0430A32109A1FBFB46D1467 /* Pods-GlanceCalendarTests */,
-				F2DF7028EDBAA6CF146C9570D1E6420B /* SwiftMoment */,
+				C939EE843CC5E484F91A5994EAA7301D /* Pods-GlanceCalendar */,
+				A35F5D267BC01929091725E7219E4C5F /* Pods-GlanceCalendarTests */,
+				159D4A805CFD4598CD0FF811F7EFA63A /* SwiftMoment */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FCC636291EBD872F8738E2C3107FB2B8 /* Resources */ = {
+		55C3B32988326939637120DD2FBBBB43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA38A875089340A67D06EE69665F226 /* MomentFromNow.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA64ABB6E1FFB52E38664109EA4A819D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2C595DDBFFCA72A6F24B1C0307AB2F /* MomentFromNow.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA442216F2427BAEE064622AF8F002EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7C80375B5862B873A67519861D0FB225 /* Sources */ = {
+		054BE2016B7BD63B5BCF44BE3BB8DD45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58BB9F4C93CFD4CD2FD0BDDF12200AC2 /* Pods-GlanceCalendarTests-dummy.m in Sources */,
+				7CB369121F895666354FA69C5C8237DD /* Pods-GlanceCalendar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1C0A885228822A3979EE4ABBF87E47F /* Sources */ = {
+		20FEB618A808C4DB1EE90D2FF8A13FD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F1ABD1E31D48187C92C6DE7D0C70B0E /* Pods-GlanceCalendar-dummy.m in Sources */,
+				C93BBF7639FF04B5B806B603F1A676A3 /* Pods-GlanceCalendarTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEAC17B2CC1480128E256FDB4BA77A5C /* Sources */ = {
+		A5AE8DAD47F3A20450E0AE3E3F9F8E38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E79ED448637121079863302C2F9F721 /* Duration.swift in Sources */,
-				428BBBCF85D2646C257373C46FC43DA0 /* Extensions.swift in Sources */,
-				92F15974234B30B672A9E2878AB79362 /* LazyBox.swift in Sources */,
-				CE73455A387B3BDB1AC4C69AA0F588CF /* Moment.swift in Sources */,
-				098817E25080752A8891AEED837A6C97 /* MomentFromNow.swift in Sources */,
-				8AA14888FEFF87C76DF09CE1FAC1D16F /* Operators.swift in Sources */,
-				7D9C4DE3F11F274FEFFFFADFB991B26A /* SwiftMoment-dummy.m in Sources */,
-				640C002C4BE513606CAE5B489C7DAE41 /* TimeUnit.swift in Sources */,
+				1E179D613ACB307473842D46EE8A98C1 /* Duration.swift in Sources */,
+				9B468DFD09DE0DD3B3EA3D86B74877B1 /* Extensions.swift in Sources */,
+				8496973C8469B530C6465E93BE690C52 /* LazyBox.swift in Sources */,
+				583D1CC888EC5A18092C177E67101917 /* Moment.swift in Sources */,
+				82AE7C5E58721372F67D056C8C7D7166 /* MomentFromNow.swift in Sources */,
+				80B278C2FFE9FE3B0CAE852312B107E0 /* Operators.swift in Sources */,
+				9F1CEB5371B1036877307DCC5B1C2E66 /* SwiftMoment-dummy.m in Sources */,
+				5856F2CBB881F5512D69D254BB3FDCFB /* TimeUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		116273D6DF9898E9A005DE42CB2F2047 /* PBXTargetDependency */ = {
+		493DC24EE8DD2988ACCFC14101D7D624 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftMoment;
-			target = F2DF7028EDBAA6CF146C9570D1E6420B /* SwiftMoment */;
-			targetProxy = 88897B15B63B31970B7CB0A4C44D28BE /* PBXContainerItemProxy */;
+			target = 159D4A805CFD4598CD0FF811F7EFA63A /* SwiftMoment */;
+			targetProxy = 9C4151E25B27212C5AB8BBC030B4658D /* PBXContainerItemProxy */;
 		};
-		384A1F0D6613AEC6A1AF43C05BFD6329 /* PBXTargetDependency */ = {
+		4B4110503D9F7FC7D1D6DB6190129141 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GlanceCalendar";
-			target = 68E5051FB096EC5D92D87B6C3DFD5442 /* Pods-GlanceCalendar */;
-			targetProxy = 93A5A4CBA005236FA40571A900924FA8 /* PBXContainerItemProxy */;
+			target = C939EE843CC5E484F91A5994EAA7301D /* Pods-GlanceCalendar */;
+			targetProxy = 792988D61A411D9BEC3830CF5ADB788D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1C319FE8FEF78C160E1BFEB270E25F16 /* Release */ = {
+		1911FD88F6D261416AB88DEB291F1732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE0EEB5EF6F4AA8A4DA5827092D076C /* SwiftMoment.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMoment/SwiftMoment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMoment/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/SwiftMoment/SwiftMoment.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMoment;
+				PRODUCT_NAME = SwiftMoment;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		60B91237D2FFE2740BF1E8D13FD29DDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12183A3A88090A20A1DDD38DE9DE5F36 /* Pods-GlanceCalendar.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		694615FBF02A612BFC7415C89DFE1885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E417B16CE0B4D0B948ABAA1E0829A414 /* Pods-GlanceCalendarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendarTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		786C79AAC5A5091E97900B38B48731E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE0EEB5EF6F4AA8A4DA5827092D076C /* SwiftMoment.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMoment/SwiftMoment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMoment/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/SwiftMoment/SwiftMoment.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMoment;
+				PRODUCT_NAME = SwiftMoment;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7965C470C2862C8D8FFBF823A256C08A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3824B46931403A8E0AE984ED39187870 /* Pods-GlanceCalendarTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendarTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9992CE2C5F65320F0081E9A0ACAFFF91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -471,90 +683,14 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		2E856A0FC23F8304B4C88084A26557FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3824B46931403A8E0AE984ED39187870 /* Pods-GlanceCalendarTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendarTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		419A79E7ECF941AE39D5A62F953545FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FE0EEB5EF6F4AA8A4DA5827092D076C /* SwiftMoment.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMoment/SwiftMoment-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMoment/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/SwiftMoment/SwiftMoment.modulemap";
-				PRODUCT_MODULE_NAME = SwiftMoment;
-				PRODUCT_NAME = SwiftMoment;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		822B7102BBE44F4B911960928BE7992D /* Debug */ = {
+		D79C9CF82E0503B6800775A4C33DD9A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -608,7 +744,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -617,125 +754,7 @@
 			};
 			name = Debug;
 		};
-		8B8FBDF6AA6165460B9D8954DDB69756 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12183A3A88090A20A1DDD38DE9DE5F36 /* Pods-GlanceCalendar.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BF5D3BF5D2C46CE830F5727A12A65AAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FE0EEB5EF6F4AA8A4DA5827092D076C /* SwiftMoment.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMoment/SwiftMoment-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMoment/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/SwiftMoment/SwiftMoment.modulemap";
-				PRODUCT_MODULE_NAME = SwiftMoment;
-				PRODUCT_NAME = SwiftMoment;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D0218A03F1E25EEA236B87A8BB16B386 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E417B16CE0B4D0B948ABAA1E0829A414 /* Pods-GlanceCalendarTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-GlanceCalendarTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F85237482950DF7A5BFAB4FD42321288 /* Release */ = {
+		FF9D8F051A63F71C11C56A1495C2086E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A883FB364E12B94A1366CD19598CF21 /* Pods-GlanceCalendar.release.xcconfig */;
 			buildSettings = {
@@ -769,7 +788,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -778,20 +798,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		096DF79E649F618054D658818D24320E /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendar" */ = {
+		218ACFD3A6610AEECBFAE4508A6F304A /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B8FBDF6AA6165460B9D8954DDB69756 /* Debug */,
-				F85237482950DF7A5BFAB4FD42321288 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1E0616122A11F820FDFE7F07EDBDE1C3 /* Build configuration list for PBXNativeTarget "SwiftMoment" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				419A79E7ECF941AE39D5A62F953545FC /* Debug */,
-				BF5D3BF5D2C46CE830F5727A12A65AAA /* Release */,
+				60B91237D2FFE2740BF1E8D13FD29DDA /* Debug */,
+				FF9D8F051A63F71C11C56A1495C2086E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -799,17 +810,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				822B7102BBE44F4B911960928BE7992D /* Debug */,
-				1C319FE8FEF78C160E1BFEB270E25F16 /* Release */,
+				D79C9CF82E0503B6800775A4C33DD9A7 /* Debug */,
+				9992CE2C5F65320F0081E9A0ACAFFF91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1B6D16C44381B7AD443194E16D80F0C /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendarTests" */ = {
+		781CC55A65EC776DEE674E48BBC7A5ED /* Build configuration list for PBXNativeTarget "SwiftMoment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E856A0FC23F8304B4C88084A26557FA /* Debug */,
-				D0218A03F1E25EEA236B87A8BB16B386 /* Release */,
+				1911FD88F6D261416AB88DEB291F1732 /* Debug */,
+				786C79AAC5A5091E97900B38B48731E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA3BAE72F675609FA555DC0FDFA855BD /* Build configuration list for PBXNativeTarget "Pods-GlanceCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7965C470C2862C8D8FFBF823A256C08A /* Debug */,
+				694615FBF02A612BFC7415C89DFE1885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
