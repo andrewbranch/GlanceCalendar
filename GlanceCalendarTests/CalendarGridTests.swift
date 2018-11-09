@@ -18,6 +18,5 @@ class CalendarGridTests: XCTestCase {
         XCTAssert(novemberWeeks.count == 5, "Has the correct number of weeks")
         XCTAssert(novemberWeeks[0][0].isEqualTo(moment([ "month": 10, "day": 28, "year": 2018 ])!), "First day is correct")
         XCTAssert(novemberWeeks[4][6].isEqualTo(moment([ "month": 12, "day": 1, "year": 2018 ])!), "Last day is correct")
-        
     }
 }

@@ -80,7 +80,12 @@ class CalendarViewController: NSViewController {
     }
     
     func updateCalendar() {
-        children.removeAll()
+        children.forEach {
+            $0.view.viewWillMove(toSuperview: nil)
+            $0.view.removeFromSuperview()
+            $0.removeFromParent()
+        }
+        
         monthLabel.stringValue = weeks[1][0].monthName
         weeks.enumerated().forEach { week in
             week.element.enumerated().forEach { day in
