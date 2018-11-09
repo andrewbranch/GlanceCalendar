@@ -18,9 +18,10 @@ class CalendarViewController: NSViewController {
     @IBOutlet var insetView: NSView!
     @IBOutlet var headerView: CalendarHeaderView!
     @IBOutlet var monthLabel: NSTextField!
-    var date = moment() {
+    public var currentDate = moment()
+    private var selectedDate = moment() {
         didSet {
-            if oldValue.year != date.year || oldValue.month != date.month {
+            if oldValue.year != selectedDate.year || oldValue.month != selectedDate.month {
                 updateCalendar()
             }
         }
@@ -28,7 +29,7 @@ class CalendarViewController: NSViewController {
 
     private var weeks: [[Moment]] {
         get {
-            return calendar.getWeeks(month: date.month, year: date.year)
+            return calendar.getWeeks(month: selectedDate.month, year: selectedDate.year)
         }
     }
 
@@ -50,9 +51,9 @@ class CalendarViewController: NSViewController {
         
         
         let monthControlsContainer = NSView()
-        let prevButton = MonthControlButton(imageName: "arrowLeft")
-        let todayButton = MonthControlButton(imageName: "dot")
-        let nextButton = MonthControlButton(imageName: "arrowRight")
+        let prevButton = MonthControlButton(imageName: "arrowLeft", target: self, action: #selector(self.goToPreviousMonth))
+        let todayButton = MonthControlButton(imageName: "dot", target: self, action: #selector(self.goToToday))
+        let nextButton = MonthControlButton(imageName: "arrowRight", target: self, action: #selector(self.goToNextMonth))
         monthControlsContainer.translatesAutoresizingMaskIntoConstraints = false
         monthControlsContainer.subviews = [prevButton, todayButton, nextButton]
         headerView.addSubview(monthControlsContainer)
@@ -72,11 +73,19 @@ class CalendarViewController: NSViewController {
     }
     
     func setMonth(month: Int, year: Int) {
-        date = moment([year, month])!
+        selectedDate = moment([year, month])!
     }
     
-    func goToToday() {
-        date = moment()
+    @objc func goToToday() {
+        selectedDate = moment()
+    }
+    
+    @objc func goToPreviousMonth() {
+        setMonth(month: selectedDate.month - 1, year: selectedDate.year)
+    }
+    
+    @objc func goToNextMonth() {
+        setMonth(month: selectedDate.month + 1, year: selectedDate.year)
     }
     
     func updateCalendar() {
@@ -97,7 +106,7 @@ class CalendarViewController: NSViewController {
                         height: dayViewSize
                     ),
                     date: day.element,
-                    forMonth: date.month
+                    forMonth: selectedDate.month
                 )
                 addChild(vc)
                 insetView.addSubview(vc.view)

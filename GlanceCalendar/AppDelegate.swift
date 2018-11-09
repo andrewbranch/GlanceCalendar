@@ -8,6 +8,7 @@
 
 import Cocoa
 import ServiceManagement
+import SwiftMoment
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
@@ -81,7 +82,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         highlightTitle!.mutableString.setString(timeString)
         statusItem.button!.attributedTitle = title!
         dateMenuItem.title = Date.fullDate()
-        calendarViewController.goToToday()
+        calendarViewController.currentDate = moment()
         if menuIsOpen {
             statusItem.button!.attributedAlternateTitle = highlightTitle!
         }
