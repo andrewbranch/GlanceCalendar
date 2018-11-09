@@ -20,9 +20,13 @@ public class CalendarGrid: NSObject {
         while !last {
             var week: [Moment] = []
             for d in 0...6 {
-                let day = firstDayMoment.add(w.weeks + d.days)
+                let day = moment([
+                    "year": firstDayMoment.year,
+                    "month": firstDayMoment.month,
+                    "day": firstDayMoment.day + 7 * w + d
+                ])!
                 week.append(day)
-                last = last || day.isEqualTo(lastDayMoment)
+                last = last || (day.day == lastDayMoment.day && day.month == lastDayMoment.month)
             }
             weeks.append(week)
             if last {
