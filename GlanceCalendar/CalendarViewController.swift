@@ -15,14 +15,18 @@ class CalendarViewController: NSViewController {
     let controlButtonMargin: CGFloat = 5
     let calendar = CalendarGrid()
     
+    var calendarHeightConstraint: NSLayoutConstraint?
+    var dayViewControllers: [CalendarDayViewController] = []
     @IBOutlet var insetView: NSView!
     @IBOutlet var headerView: CalendarHeaderView!
     @IBOutlet var monthLabel: NSTextField!
     public var currentDate = moment()
     private var selectedDate = moment() {
         didSet {
-            if oldValue.year != selectedDate.year || oldValue.month != selectedDate.month {
+            if !oldValue.isSameMonth(selectedDate) {
                 updateCalendar()
+            } else if oldValue.day != selectedDate.day {
+                updateSelectedDay(prevDay: oldValue, nextDay: selectedDate)
             }
         }
     }
@@ -30,6 +34,12 @@ class CalendarViewController: NSViewController {
     private var weeks: [[Moment]] {
         get {
             return calendar.getWeeks(month: selectedDate.month, year: selectedDate.year)
+        }
+    }
+    
+    private var calendarHeight: CGFloat {
+        get {
+            return CGFloat(weeks.count) * (dayViewSize + dayViewMargin) - dayViewMargin
         }
     }
 
@@ -43,7 +53,8 @@ class CalendarViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        insetView.heightAnchor.constraint(equalToConstant: CGFloat(weeks.count) * (dayViewSize + dayViewMargin) - dayViewMargin).isActive = true
+        calendarHeightConstraint = insetView.heightAnchor.constraint(equalToConstant: calendarHeight)
+        calendarHeightConstraint!.isActive = true
         insetView.widthAnchor.constraint(equalToConstant: 7 * (dayViewSize + dayViewMargin) - dayViewMargin).isActive = true
         let widthConstraint = view.widthAnchor.constraint(equalTo: insetView.widthAnchor, constant: dayViewMargin * 2)
         widthConstraint.priority = .defaultHigh
@@ -73,7 +84,8 @@ class CalendarViewController: NSViewController {
     }
     
     func setMonth(month: Int, year: Int) {
-        selectedDate = moment([year, month])!
+        let isCurrentMonth = (year, month) == (currentDate.year, currentDate.month)
+        selectedDate = moment([year, month, isCurrentMonth ? currentDate.day : 1])!
     }
     
     @objc func goToToday() {
@@ -89,12 +101,13 @@ class CalendarViewController: NSViewController {
     }
     
     func updateCalendar() {
-        children.forEach {
+        dayViewControllers.forEach {
             $0.view.viewWillMove(toSuperview: nil)
             $0.view.removeFromSuperview()
             $0.removeFromParent()
         }
-        
+
+        dayViewControllers = []
         monthLabel.stringValue = weeks[1][0].monthName
         weeks.enumerated().forEach { week in
             week.element.enumerated().forEach { day in
@@ -108,12 +121,29 @@ class CalendarViewController: NSViewController {
                     date: day.element,
                     forMonth: selectedDate.month
                 )
+                vc.isSelected = day.element.isSameDay(selectedDate)
                 addChild(vc)
                 insetView.addSubview(vc.view)
+                dayViewControllers.append(vc)
             }
+        }
+
+        NSAnimationContext.runAnimationGroup { context in
+            context.duration = 0.1
+            calendarHeightConstraint!.animator().constant = calendarHeight
         }
         // Without this (even with `view.needsLayout = true`), the view flashes in
         // at the wrong size before adjusting when the menu first opens.
         view.layoutSubtreeIfNeeded()
+    }
+    
+    func getDayViewController(forDay day: Int) -> CalendarDayViewController {
+        let offset = dayViewControllers.firstIndex { $0.date.day == day }!
+        return dayViewControllers[day - 1 + offset]
+    }
+    
+    func updateSelectedDay(prevDay: Moment, nextDay: Moment) {
+        getDayViewController(forDay: prevDay.day).isSelected = false
+        getDayViewController(forDay: nextDay.day).isSelected = true
     }
 }

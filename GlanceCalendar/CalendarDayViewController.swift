@@ -12,8 +12,18 @@ import SwiftMoment
 class CalendarDayViewController: NSViewController {
     static let margin = (8, 4)
     private let frame: NSRect
-    private let date: Moment
+    public let date: Moment
     private let forMonth: Int
+    private var dayView: CalendarDayView {
+        get {
+            return view as! CalendarDayView
+        }
+    }
+    public var isSelected: Bool = false {
+        didSet {
+            dayView.state = dayViewState
+        }
+    }
     private var isToday: Bool {
         get {
             return Calendar.current.isDateInToday(date.date)
@@ -26,7 +36,7 @@ class CalendarDayViewController: NSViewController {
     }
     private var dayViewState: DayViewState {
         get {
-            if isToday {
+            if isSelected {
                 return .Selected
             }
             if isInMonth {

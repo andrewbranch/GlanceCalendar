@@ -20,6 +20,7 @@
 		49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E57217D57C7007C27ED /* CalendarViewController.swift */; };
 		49004E5A217D57C7007C27ED /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49004E58217D57C7007C27ED /* CalendarViewController.xib */; };
 		49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E5C217D6522007C27ED /* CalendarGrid.swift */; };
+		493598222197526700D6B853 /* Moment+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493598212197526700D6B853 /* Moment+Custom.swift */; };
 		494109F0217D6EB800DE2B45 /* CalendarGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */; };
 		494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */; };
 		494838E62186531B00B3D4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494838E52186531B00B3D4F9 /* AppDelegate.swift */; };
@@ -82,6 +83,7 @@
 		49004E57217D57C7007C27ED /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		49004E58217D57C7007C27ED /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
 		49004E5C217D6522007C27ED /* CalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGrid.swift; sourceTree = "<group>"; };
+		493598212197526700D6B853 /* Moment+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moment+Custom.swift"; sourceTree = "<group>"; };
 		494109ED217D6EB800DE2B45 /* GlanceCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlanceCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridTests.swift; sourceTree = "<group>"; };
 		494109F1217D6EB800DE2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				490022BC218619FA0010D83A /* CalendarDayView.swift */,
 				490022B421857CA10010D83A /* NSColor+Custom.swift */,
 				49E04608218668A600E78BFC /* MonthControlButton.swift */,
+				493598212197526700D6B853 /* Moment+Custom.swift */,
 			);
 			path = GlanceCalendar;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				490022DB218630090010D83A /* Notification.Name+Custom.swift in Sources */,
 				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
 				49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */,
+				493598222197526700D6B853 /* Moment+Custom.swift in Sources */,
 				49004E42217D2C9C007C27ED /* ViewController.swift in Sources */,
 				490022BD218619FA0010D83A /* CalendarDayView.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
