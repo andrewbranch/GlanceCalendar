@@ -117,15 +117,11 @@ class CalendarViewController: NSViewController {
         }
 
         let calendarHeight = CGFloat(weeks.count) * (dayViewSize + dayViewMargin) - dayViewMargin
-        NSAnimationContext.runAnimationGroup({ context in
-            context.duration = 0.1
-            calendarHeightConstraint!.animator().constant = calendarHeight
-            calendarHeightConstraint!.animator().isActive = true
-        }) { [weak self] in
-            // Without this (even with `view.needsLayout = true`), the view flashes in
-            // at the wrong size before adjusting when the menu first opens.
-            self?.view.layoutSubtreeIfNeeded()
-        }
+        calendarHeightConstraint!.constant = calendarHeight
+        calendarHeightConstraint!.isActive = true
+        // Without this (even with `view.needsLayout = true`), the view flashes in
+        // at the wrong size before adjusting when the menu first opens.
+        view.layoutSubtreeIfNeeded()
     }
     
     func getDayViewController(forDay day: Int) -> CalendarDayViewController {
