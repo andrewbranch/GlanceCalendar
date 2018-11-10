@@ -31,18 +31,6 @@ class CalendarViewController: NSViewController {
         }
     }
 
-    private var weeks: [[Moment]] {
-        get {
-            return calendar.getWeeks(month: selectedDate.month, year: selectedDate.year)
-        }
-    }
-    
-    private var calendarHeight: CGFloat {
-        get {
-            return CGFloat(weeks.count) * (dayViewSize + dayViewMargin) - dayViewMargin
-        }
-    }
-
     init() {
         super.init(nibName: "CalendarViewController", bundle: nil)
     }
@@ -53,8 +41,7 @@ class CalendarViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calendarHeightConstraint = insetView.heightAnchor.constraint(equalToConstant: calendarHeight)
-        calendarHeightConstraint!.isActive = true
+        calendarHeightConstraint = insetView.heightAnchor.constraint(equalToConstant: 0) // Set and activated in updateCalendar()
         insetView.widthAnchor.constraint(equalToConstant: 7 * (dayViewSize + dayViewMargin) - dayViewMargin).isActive = true
         let widthConstraint = view.widthAnchor.constraint(equalTo: insetView.widthAnchor, constant: dayViewMargin * 2)
         widthConstraint.priority = .defaultHigh
@@ -107,6 +94,7 @@ class CalendarViewController: NSViewController {
             $0.removeFromParent()
         }
 
+        let weeks = calendar.getWeeks(month: selectedDate.month, year: selectedDate.year)
         dayViewControllers = []
         monthLabel.stringValue = weeks[1][0].monthName
         weeks.enumerated().forEach { week in
@@ -128,13 +116,16 @@ class CalendarViewController: NSViewController {
             }
         }
 
-        NSAnimationContext.runAnimationGroup { context in
+        let calendarHeight = CGFloat(weeks.count) * (dayViewSize + dayViewMargin) - dayViewMargin
+        NSAnimationContext.runAnimationGroup({ context in
             context.duration = 0.1
             calendarHeightConstraint!.animator().constant = calendarHeight
+            calendarHeightConstraint!.animator().isActive = true
+        }) { [weak self] in
+            // Without this (even with `view.needsLayout = true`), the view flashes in
+            // at the wrong size before adjusting when the menu first opens.
+            self?.view.layoutSubtreeIfNeeded()
         }
-        // Without this (even with `view.needsLayout = true`), the view flashes in
-        // at the wrong size before adjusting when the menu first opens.
-        view.layoutSubtreeIfNeeded()
     }
     
     func getDayViewController(forDay day: Int) -> CalendarDayViewController {

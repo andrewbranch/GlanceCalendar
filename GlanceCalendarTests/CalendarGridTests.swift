@@ -19,4 +19,11 @@ class CalendarGridTests: XCTestCase {
         XCTAssert(novemberWeeks[0][0].isEqualTo(moment([ "month": 10, "day": 28, "year": 2018 ])!), "First day is correct")
         XCTAssert(novemberWeeks[4][6].isEqualTo(moment([ "month": 12, "day": 1, "year": 2018 ])!), "Last day is correct")
     }
+    
+    func testGetWeeksPerformance() {
+        let calendar = CalendarGrid()
+        measure {
+            let _ = calendar.getWeeks(month: 9, year: 2018)
+        }
+    }
 }

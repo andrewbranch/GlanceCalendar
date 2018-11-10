@@ -32,8 +32,6 @@ class CalendarDayView: NSView {
             .kern: -0.15
         ]))
         super.init(frame: frame)
-        wantsLayer = true
-        layer?.cornerRadius = frame.width / 2
         addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
@@ -45,16 +43,18 @@ class CalendarDayView: NSView {
     override func updateLayer() {
         switch state {
         case .Selected:
-            label.textColor = NSColor.primaryTextInvert
+            wantsLayer = true
+            layer?.cornerRadius = frame.width / 2
             layer?.backgroundColor = NSColor.accent.cgColor
+            label.textColor = NSColor.primaryTextInvert
             break
         case .OutOfMonth:
+            wantsLayer = false
             label.textColor = NSColor.disabledText
-            layer?.backgroundColor = CGColor.clear
             break
         default:
+            wantsLayer = false
             label.textColor = NSColor.primaryText
-            layer?.backgroundColor = CGColor.clear
         }
     }
 }
