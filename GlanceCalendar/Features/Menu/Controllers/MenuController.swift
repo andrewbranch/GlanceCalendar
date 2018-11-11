@@ -5,7 +5,7 @@ class MenuController: NSObject, NSMenuDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let dateTimeSettingsURL = URL(fileURLWithPath: "/System/Library/PreferencePanes/DateAndTime.prefPane")
     let dateMenuItem = NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: "")
-    let calendarViewController = CalendarViewController()
+    let calendarViewController = CalendarViewController(currentDate: Clock.shared.currentTick)
     var highlightTitle: NSMutableAttributedString?
     var title: NSMutableAttributedString?
     var menuIsOpen = false
@@ -56,7 +56,7 @@ class MenuController: NSObject, NSMenuDelegate {
         NSWorkspace.shared.open(dateTimeSettingsURL)
     }
     
-    func updateTime(_ time: Moment = moment()) {
+    func updateTime(_ time: Moment = Clock.shared.currentTick) {
         let timeString = Date.dayOfWeekAndTime()
         title!.mutableString.setString(timeString)
         highlightTitle!.mutableString.setString(timeString)
@@ -65,6 +65,8 @@ class MenuController: NSObject, NSMenuDelegate {
         calendarViewController.currentDate = time
         if menuIsOpen {
             statusItem.button!.attributedAlternateTitle = highlightTitle!
+        } else {
+            calendarViewController.selectedDate = time
         }
     }
     

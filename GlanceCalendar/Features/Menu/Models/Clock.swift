@@ -44,7 +44,7 @@ class Clock: NSObject {
     private let queue = DispatchQueue(label: "com.wheream.io.GlanceCalendar.queues.clock", qos: .userInteractive)
     private let timer: DispatchSourceTimer
     private var handlers = Handlers()
-    private var prevTime = moment()
+    public var currentTick = moment()
 
     private override init() {
         timer = DispatchSource.makeTimerSource(flags: .strict, queue: queue)
@@ -66,12 +66,13 @@ class Clock: NSObject {
     private func runHandlers() {
         let now = moment()
         handlers.minute.forEach { $0.value(now) }
-        if !now.isSameDay(prevTime) {
+        if !now.isSameDay(currentTick) {
             handlers.day.forEach { $0.value(now) }
         }
-        if !now.isSameMonth(prevTime) {
+        if !now.isSameMonth(currentTick) {
             handlers.month.forEach { $0.value(now) }
         }
+        currentTick = now
     }
 }
 

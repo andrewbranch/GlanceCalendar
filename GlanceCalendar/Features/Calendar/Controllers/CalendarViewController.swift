@@ -13,8 +13,8 @@ class CalendarViewController: NSViewController {
     @IBOutlet var insetView: NSView!
     @IBOutlet var headerView: CalendarHeaderView!
     @IBOutlet var monthLabel: NSTextField!
-    public var currentDate = moment()
-    private var selectedDate = moment() {
+    public var currentDate: Moment
+    public var selectedDate: Moment {
         didSet {
             if !oldValue.isSameMonth(selectedDate) {
                 updateCalendar()
@@ -24,7 +24,9 @@ class CalendarViewController: NSViewController {
         }
     }
 
-    init() {
+    init(currentDate: Moment) {
+        self.currentDate = currentDate
+        self.selectedDate = currentDate
         super.init(nibName: "CalendarViewController", bundle: nil)
     }
     
@@ -69,7 +71,7 @@ class CalendarViewController: NSViewController {
     }
     
     @objc func goToToday() {
-        selectedDate = moment()
+        selectedDate = currentDate
     }
     
     @objc func goToPreviousMonth() {

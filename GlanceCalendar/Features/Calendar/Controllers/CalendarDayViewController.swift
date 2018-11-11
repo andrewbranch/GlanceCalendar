@@ -18,7 +18,7 @@ class CalendarDayViewController: NSViewController {
     }
     private var isToday: Bool {
         get {
-            return Calendar.current.isDateInToday(date.date)
+            return Calendar.current.isDate(date.date, inSameDayAs: Clock.shared.currentTick)
         }
     }
     private var isInMonth: Bool {
