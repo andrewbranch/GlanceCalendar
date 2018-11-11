@@ -62,12 +62,12 @@ class MenuController: NSObject, NSMenuDelegate {
         highlightTitle!.mutableString.setString(timeString)
         statusItem.button!.attributedTitle = title!
         dateMenuItem.title = Date.fullDate()
-        calendarViewController.currentDate = time
         if menuIsOpen {
             statusItem.button!.attributedAlternateTitle = highlightTitle!
         } else {
             calendarViewController.selectedDate = time
         }
+        calendarViewController.currentDate = time
     }
     
     func menuWillOpen(_ menu: NSMenu) {

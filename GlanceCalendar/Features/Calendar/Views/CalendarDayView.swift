@@ -1,52 +1,58 @@
 import Cocoa
 
 enum DayViewState {
-    case Default
-    case Selected
-    case OutOfMonth
+    case normal
+    case selected
+    case outOfMonth
 }
 
-class CalendarDayView: NSView {
-    private let label: NSTextField
+class CalendarDayView: NSButton {
+    private let label: String
     override var allowsVibrancy: Bool {
         get {
-            return state != .Selected
+            return viewState != .selected
         }
     }
-    public var state: DayViewState {
+    public var viewState: DayViewState {
         didSet {
-            updateLayer()
+            refreshAppearance()
         }
     }
-    init(string: String, state: DayViewState, frame: NSRect) {
-        self.state = state
-        label = NSTextField(labelWithAttributedString: NSAttributedString(string: string, attributes: [
-            .kern: -0.15
-        ]))
+    init(string: String, state: DayViewState, frame: NSRect, target: AnyObject, action: Selector) {
+        label = string
+        viewState = state
         super.init(frame: frame)
-        addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        isBordered = false
+        self.target = target
+        self.action = action
     }
     required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    override func updateLayer() {
-        switch state {
-        case .Selected:
+
+    func refreshAppearance() {
+        switch viewState {
+        case .selected:
             wantsLayer = true
             layer?.cornerRadius = frame.width / 2
             layer?.backgroundColor = NSColor.accent.cgColor
-            label.textColor = NSColor.primaryTextInvert
+            attributedTitle = getStringWithColor(string: label, color: .primaryTextInvert)
             break
-        case .OutOfMonth:
+        case .outOfMonth:
             wantsLayer = false
-            label.textColor = NSColor.disabledText
+            attributedTitle = getStringWithColor(string: label, color: .disabledText)
             break
         default:
             wantsLayer = false
-            label.textColor = NSColor.primaryText
+            attributedTitle = getStringWithColor(string: label, color: .primaryText)
         }
+    }
+    
+    private func getStringWithColor(string: String, color: NSColor) -> NSAttributedString {
+        return NSAttributedString(string: string, attributes: [
+            .kern: -0.15,
+            .foregroundColor: color
+        ])
     }
 }

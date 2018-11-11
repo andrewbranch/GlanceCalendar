@@ -13,7 +13,13 @@ class CalendarViewController: NSViewController {
     @IBOutlet var insetView: NSView!
     @IBOutlet var headerView: CalendarHeaderView!
     @IBOutlet var monthLabel: NSTextField!
-    public var currentDate: Moment
+    public var currentDate: Moment {
+        didSet {
+            if currentDate.isSameMonth(selectedDate) && !oldValue.isSameDay(currentDate) {
+                updateCurrentDay(prevDay: oldValue, nextDay: currentDate)
+            }
+        }
+    }
     public var selectedDate: Moment {
         didSet {
             if !oldValue.isSameMonth(selectedDate) {
@@ -101,8 +107,12 @@ class CalendarViewController: NSViewController {
                         width: dayViewSize,
                         height: dayViewSize
                     ),
-                    date: day.element,
-                    forMonth: selectedDate.month
+                    day: day.element.day,
+                    isToday: day.element.isSameDay(currentDate),
+                    inAdjacentMonth: !day.element.isSameMonth(selectedDate),
+                    onClick: { [weak self] in
+                        self?.selectedDate = day.element
+                    }
                 )
                 vc.isSelected = day.element.isSameDay(selectedDate)
                 addChild(vc)
@@ -119,13 +129,17 @@ class CalendarViewController: NSViewController {
         view.layoutSubtreeIfNeeded()
     }
     
-    func getDayViewController(forDay day: Int) -> CalendarDayViewController {
-        let offset = dayViewControllers.firstIndex { $0.date.day == day }!
-        return dayViewControllers[day - 1 + offset]
+    func getDayViewController(forDay day: Int) -> CalendarDayViewController? {
+        return dayViewControllers.first { !$0.inAdjacentMonth && $0.day == day }
     }
     
     func updateSelectedDay(prevDay: Moment, nextDay: Moment) {
-        getDayViewController(forDay: prevDay.day).isSelected = false
-        getDayViewController(forDay: nextDay.day).isSelected = true
+        getDayViewController(forDay: prevDay.day)?.isSelected = false
+        getDayViewController(forDay: nextDay.day)?.isSelected = true
+    }
+    
+    func updateCurrentDay(prevDay: Moment, nextDay: Moment) {
+        getDayViewController(forDay: prevDay.day)?.isToday = false
+        getDayViewController(forDay: nextDay.day)?.isToday = true
     }
 }

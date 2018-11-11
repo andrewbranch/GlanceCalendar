@@ -3,50 +3,57 @@ import SwiftMoment
 
 class CalendarDayViewController: NSViewController {
     static let margin = (8, 4)
+
     private let frame: NSRect
-    public let date: Moment
-    private let forMonth: Int
+    private let onClick: () -> Void
     private var dayView: CalendarDayView {
         get {
             return view as! CalendarDayView
         }
     }
-    public var isSelected: Bool = false {
-        didSet {
-            dayView.state = dayViewState
-        }
-    }
-    private var isToday: Bool {
-        get {
-            return Calendar.current.isDate(date.date, inSameDayAs: Clock.shared.currentTick)
-        }
-    }
-    private var isInMonth: Bool {
-        get {
-            return date.month == forMonth
-        }
-    }
     private var dayViewState: DayViewState {
         get {
             if isSelected {
-                return .Selected
+                return .selected
             }
-            if isInMonth {
-                return .Default
+            if isToday {
+                return .selected
             }
-            return .OutOfMonth
+            if inAdjacentMonth {
+                return .outOfMonth
+            }
+            return .normal
         }
     }
     
-    init(frame: NSRect, date: Moment, forMonth: Int) {
-        self.date = date
-        self.forMonth = forMonth
+    public let day: Int
+    public let inAdjacentMonth: Bool
+    public var isSelected: Bool = false {
+        didSet {
+            dayView.viewState = dayViewState
+        }
+    }
+    public var isToday: Bool = false {
+        didSet {
+            dayView.viewState = dayViewState
+        }
+    }
+    
+    init(frame: NSRect, day: Int, isToday: Bool, inAdjacentMonth: Bool, onClick: @escaping () -> Void) {
         self.frame = frame
+        self.day = day
+        self.isToday = isToday
+        self.inAdjacentMonth = inAdjacentMonth
+        self.onClick = onClick
         super.init(nibName: nil, bundle: nil)
     }
     
     override func loadView() {
-        view = CalendarDayView(string: "\(date.day)", state: dayViewState, frame: frame)
+        view = CalendarDayView(string: "\(day)", state: dayViewState, frame: frame, target: self, action: #selector(runClickCallback))
+    }
+    
+    @objc private func runClickCallback() {
+        onClick()
     }
     
     required init?(coder: NSCoder) {
