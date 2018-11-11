@@ -1,11 +1,3 @@
-//
-//  CarbonKeyHandler.swift
-//  GlanceCalendar
-//
-//  Created by Andrew Branch on 11/10/18.
-//  Copyright © 2018 Wheream.io. All rights reserved.
-//
-
 import Foundation
 import Cocoa
 import Carbon

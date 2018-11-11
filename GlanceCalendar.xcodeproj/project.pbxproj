@@ -13,7 +13,7 @@
 		490022D721862D2C0010D83A /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490022D621862D2C0010D83A /* ServiceManagement.framework */; };
 		490022DB218630090010D83A /* Notification.Name+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022DA218630090010D83A /* Notification.Name+Custom.swift */; };
 		49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E3F217D2C9C007C27ED /* AppDelegate.swift */; };
-		49004E42217D2C9C007C27ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* ViewController.swift */; };
+		49004E42217D2C9C007C27ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* MenuViewController.swift */; };
 		49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49004E43217D2C9D007C27ED /* Assets.xcassets */; };
 		49004E47217D2C9D007C27ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49004E45217D2C9D007C27ED /* Main.storyboard */; };
 		49004E50217D2E55007C27ED /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E4F217D2E55007C27ED /* Date+Formatting.swift */; };
@@ -75,7 +75,7 @@
 		490022DA218630090010D83A /* Notification.Name+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Custom.swift"; sourceTree = "<group>"; };
 		49004E3C217D2C9C007C27ED /* GlanceCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlanceCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49004E3F217D2C9C007C27ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49004E41217D2C9C007C27ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49004E41217D2C9C007C27ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		49004E43217D2C9D007C27ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49004E46217D2C9D007C27ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49004E48217D2C9D007C27ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		4935982B2198A36200D6B853 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				49004E41217D2C9C007C27ED /* ViewController.swift */,
+				49004E41217D2C9C007C27ED /* MenuViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -476,7 +476,7 @@
 				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
 				49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */,
 				493598222197526700D6B853 /* Moment+Custom.swift in Sources */,
-				49004E42217D2C9C007C27ED /* ViewController.swift in Sources */,
+				49004E42217D2C9C007C27ED /* MenuViewController.swift in Sources */,
 				490022BD218619FA0010D83A /* CalendarDayView.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
 				49E04609218668A600E78BFC /* MonthControlButton.swift in Sources */,

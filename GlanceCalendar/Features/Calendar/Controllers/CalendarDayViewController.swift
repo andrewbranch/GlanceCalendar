@@ -1,11 +1,3 @@
-//
-//  CalendarDayViewController.swift
-//  GlanceCalendar
-//
-//  Created by Andrew Branch on 10/21/18.
-//  Copyright © 2018 Wheream.io. All rights reserved.
-//
-
 import Cocoa
 import SwiftMoment
 
