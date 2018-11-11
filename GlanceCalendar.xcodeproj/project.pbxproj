@@ -13,7 +13,7 @@
 		490022D721862D2C0010D83A /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490022D621862D2C0010D83A /* ServiceManagement.framework */; };
 		490022DB218630090010D83A /* Notification.Name+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022DA218630090010D83A /* Notification.Name+Custom.swift */; };
 		49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E3F217D2C9C007C27ED /* AppDelegate.swift */; };
-		49004E42217D2C9C007C27ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* MenuViewController.swift */; };
+		49004E42217D2C9C007C27ED /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E41217D2C9C007C27ED /* MenuController.swift */; };
 		49004E44217D2C9D007C27ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49004E43217D2C9D007C27ED /* Assets.xcassets */; };
 		49004E47217D2C9D007C27ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49004E45217D2C9D007C27ED /* Main.storyboard */; };
 		49004E50217D2E55007C27ED /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E4F217D2E55007C27ED /* Date+Formatting.swift */; };
@@ -22,6 +22,7 @@
 		49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49004E5C217D6522007C27ED /* CalendarGrid.swift */; };
 		493598222197526700D6B853 /* Moment+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493598212197526700D6B853 /* Moment+Custom.swift */; };
 		4935982421977ECC00D6B853 /* CarbonKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935982321977ECC00D6B853 /* CarbonKeyHandler.swift */; };
+		4935982F2198AE9200D6B853 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935982E2198AE9200D6B853 /* Clock.swift */; };
 		494109F0217D6EB800DE2B45 /* CalendarGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */; };
 		494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */; };
 		494838E62186531B00B3D4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494838E52186531B00B3D4F9 /* AppDelegate.swift */; };
@@ -75,7 +76,7 @@
 		490022DA218630090010D83A /* Notification.Name+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Custom.swift"; sourceTree = "<group>"; };
 		49004E3C217D2C9C007C27ED /* GlanceCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlanceCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49004E3F217D2C9C007C27ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49004E41217D2C9C007C27ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		49004E41217D2C9C007C27ED /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		49004E43217D2C9D007C27ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49004E46217D2C9D007C27ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49004E48217D2C9D007C27ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		49004E5C217D6522007C27ED /* CalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGrid.swift; sourceTree = "<group>"; };
 		493598212197526700D6B853 /* Moment+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moment+Custom.swift"; sourceTree = "<group>"; };
 		4935982321977ECC00D6B853 /* CarbonKeyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonKeyHandler.swift; sourceTree = "<group>"; };
+		4935982E2198AE9200D6B853 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		494109ED217D6EB800DE2B45 /* GlanceCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlanceCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		494109EF217D6EB800DE2B45 /* CalendarGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridTests.swift; sourceTree = "<group>"; };
 		494109F1217D6EB800DE2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,7 +164,6 @@
 				49004E48217D2C9D007C27ED /* Info.plist */,
 				49004E45217D2C9D007C27ED /* Main.storyboard */,
 				49004E3F217D2C9C007C27ED /* AppDelegate.swift */,
-				4935982321977ECC00D6B853 /* CarbonKeyHandler.swift */,
 				4935982521989C4200D6B853 /* Extensions */,
 				4935982A2198A32700D6B853 /* Features */,
 			);
@@ -229,9 +230,27 @@
 		4935982B2198A36200D6B853 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				49004E41217D2C9C007C27ED /* MenuViewController.swift */,
+				4935982321977ECC00D6B853 /* CarbonKeyHandler.swift */,
+				493598302198AEA800D6B853 /* Models */,
+				493598312198AEB700D6B853 /* Controllers */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		493598302198AEA800D6B853 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4935982E2198AE9200D6B853 /* Clock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		493598312198AEB700D6B853 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49004E41217D2C9C007C27ED /* MenuController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		494109EE217D6EB800DE2B45 /* GlanceCalendarTests */ = {
@@ -476,10 +495,11 @@
 				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
 				49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */,
 				493598222197526700D6B853 /* Moment+Custom.swift in Sources */,
-				49004E42217D2C9C007C27ED /* MenuViewController.swift in Sources */,
+				49004E42217D2C9C007C27ED /* MenuController.swift in Sources */,
 				490022BD218619FA0010D83A /* CalendarDayView.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
 				49E04609218668A600E78BFC /* MonthControlButton.swift in Sources */,
+				4935982F2198AE9200D6B853 /* Clock.swift in Sources */,
 				49004E50217D2E55007C27ED /* Date+Formatting.swift in Sources */,
 				490022B621857CA10010D83A /* NSColor+Custom.swift in Sources */,
 				49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */,
