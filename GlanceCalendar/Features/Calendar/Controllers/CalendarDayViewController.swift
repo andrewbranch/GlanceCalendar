@@ -17,7 +17,7 @@ class CalendarDayViewController: NSViewController {
                 return .selected
             }
             if isToday {
-                return .selected
+                return .today
             }
             if inAdjacentMonth {
                 return .outOfMonth
