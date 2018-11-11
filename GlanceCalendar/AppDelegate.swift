@@ -13,7 +13,6 @@ import Carbon
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
-    let keyHandler = CarbonKeyHandler()
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let dateTimeSettingsURL = URL(fileURLWithPath: "/System/Library/PreferencePanes/DateAndTime.prefPane")
     let dateMenuItem = NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: "")
@@ -71,9 +70,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             self.updateTime()
         }
         RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
-        
-        keyHandler.addHandler(forSpecialKey: .leftArrow) { [weak self] in self?.calendarViewController.goToPreviousMonth() }
-        keyHandler.addHandler(forSpecialKey: .rightArrow) { [weak self] in self?.calendarViewController.goToNextMonth() }
+
+        CarbonKeyHandler.shared.addHandler(forSpecialKey: .leftArrow) { [weak self] in self?.calendarViewController.goToPreviousMonth() }
+        CarbonKeyHandler.shared.addHandler(forSpecialKey: .rightArrow) { [weak self] in self?.calendarViewController.goToNextMonth() }
     }
     
     @objc func openDateTimeSettings() {
