@@ -42,26 +42,27 @@ class MenuController: NSObject, NSMenuDelegate {
         menu.delegate = self
         statusItem.menu = menu
         
-        let timer = Timer(timeInterval: 1, repeats: true) { _ in
-            self.updateTime()
-        }
-        RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
-        
         CarbonKeyHandler.shared.addHandler(forSpecialKey: .leftArrow) { [weak self] in self?.calendarViewController.goToPreviousMonth() }
         CarbonKeyHandler.shared.addHandler(forSpecialKey: .rightArrow) { [weak self] in self?.calendarViewController.goToNextMonth() }
+        
+        Clock.shared.onChange(quantum: .minute) { [weak self] time in
+            DispatchQueue.main.async {
+                self?.updateTime(time)
+            }
+        }
     }
     
     @objc func openDateTimeSettings() {
         NSWorkspace.shared.open(dateTimeSettingsURL)
     }
     
-    func updateTime() {
+    func updateTime(_ time: Moment = moment()) {
         let timeString = Date.dayOfWeekAndTime()
         title!.mutableString.setString(timeString)
         highlightTitle!.mutableString.setString(timeString)
         statusItem.button!.attributedTitle = title!
         dateMenuItem.title = Date.fullDate()
-        calendarViewController.currentDate = moment()
+        calendarViewController.currentDate = time
         if menuIsOpen {
             statusItem.button!.attributedAlternateTitle = highlightTitle!
         }

@@ -1,7 +1,5 @@
 import Cocoa
 import SwiftMoment
 
-var november = moment([ "month": 11, "year": 2018 ])!
-moment([ "month": 11, "year": 2018, "day": 35 ])!
-
-(3, 4) == (3, 4)
+let now = Date(timeIntervalSinceNow: 0).timeIntervalSince1970
+let nextMinute = Date(timeIntervalSince1970: now + 60 - now.truncatingRemainder(dividingBy: 60))
