@@ -24,7 +24,7 @@ class CarbonKeyHandler: NSObject {
                 }
 
                 guard CarbonKeyHandler.shared.processEvent(event) else {
-                    return noErr
+                    return CallNextEventHandler(handler, eventRef)
                 }
 
                 return noErr

@@ -37,7 +37,9 @@ class MenuController: NSObject, NSMenuDelegate {
         
         menu.addItem(calendarMenuItem)
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Date & Time Preferences…", action: #selector(openDateTimeSettings), keyEquivalent: ""))
+        let prefsMenuItem = NSMenuItem(title: "Date & Time Preferences…", action: #selector(openDateTimeSettings), keyEquivalent: "")
+        prefsMenuItem.target = self
+        menu.addItem(prefsMenuItem)
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         menu.delegate = self
         statusItem.menu = menu

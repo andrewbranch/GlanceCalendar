@@ -33,6 +33,7 @@ class CalendarDayView: NSButton {
         buttonCell.highlightsBy = .contentsCellMask
         self.target = target
         self.action = action
+        refreshAppearance()
         
     }
     required init?(coder decoder: NSCoder) {
