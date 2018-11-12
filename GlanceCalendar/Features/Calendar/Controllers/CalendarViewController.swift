@@ -5,7 +5,7 @@ import Carbon
 class CalendarViewController: NSViewController {
     let dayViewSize: CGFloat = 24
     let dayViewMargin: CGFloat = 4
-    let controlButtonMargin: CGFloat = 5
+    let controlButtonMargin: CGFloat = 0
     let calendar = CalendarGrid()
     
     var calendarHeightConstraint: NSLayoutConstraint?
