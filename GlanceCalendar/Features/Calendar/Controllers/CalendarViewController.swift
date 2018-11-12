@@ -98,6 +98,9 @@ class CalendarViewController: NSViewController {
         let weeks = calendar.getWeeks(month: selectedDate.month, year: selectedDate.year)
         dayViewControllers = []
         monthLabel.stringValue = weeks[1][0].monthName
+        if weeks[1][0].year != currentDate.year {
+            monthLabel.stringValue += " \(weeks[1][0].year)"
+        }
         weeks.enumerated().forEach { week in
             week.element.enumerated().forEach { day in
                 let vc = CalendarDayViewController(
