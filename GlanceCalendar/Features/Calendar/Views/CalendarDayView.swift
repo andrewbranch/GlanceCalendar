@@ -14,11 +14,6 @@ class CalendarDayView: NSButton {
             return viewState != .selected
         }
     }
-    private var buttonCell: NSButtonCell {
-        get {
-            return cell! as! NSButtonCell
-        }
-    }
     public var viewState: DayViewState {
         didSet {
             refreshAppearance()
@@ -29,8 +24,11 @@ class CalendarDayView: NSButton {
         viewState = state
         super.init(frame: frame)
         
+        (cell as? NSButtonCell)?.highlightsBy = .contentsCellMask
+        sendAction(on: .leftMouseDown)
         isBordered = false
-        buttonCell.highlightsBy = .contentsCellMask
+        wantsLayer = true
+        layer?.cornerRadius = frame.width / 2
         self.target = target
         self.action = action
         refreshAppearance()
@@ -39,26 +37,27 @@ class CalendarDayView: NSButton {
     required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func viewDidChangeEffectiveAppearance() {
+        // New CGColors need to be recalculated from NSColor
+        refreshAppearance()
+    }
 
     func refreshAppearance() {
         switch viewState {
         case .selected:
-            wantsLayer = true
-            layer?.cornerRadius = frame.width / 2
             layer?.backgroundColor = NSColor.accent.cgColor
             attributedTitle = getStringWithColor(string: label, color: .primaryTextInvert)
             break
         case .today:
-            wantsLayer = true
-            layer?.cornerRadius = frame.width / 2
             layer?.backgroundColor = NSColor.highlightBackground.cgColor
             attributedTitle = getStringWithColor(string: label, color: .highlightForeground)
         case .outOfMonth:
-            wantsLayer = false
+            layer?.backgroundColor = NSColor.clear.cgColor
             attributedTitle = getStringWithColor(string: label, color: .disabledText)
             break
         default:
-            wantsLayer = false
+            layer?.backgroundColor = NSColor.clear.cgColor
             attributedTitle = getStringWithColor(string: label, color: .primaryText)
         }
     }
