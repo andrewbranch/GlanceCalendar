@@ -34,6 +34,8 @@
 		49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD9A0D21865DC3004D7CD6 /* CalendarHeaderView.swift */; };
 		49E04609218668A600E78BFC /* MonthControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E04608218668A600E78BFC /* MonthControlButton.swift */; };
 		7A4724C97C4EAF528F95D082 /* Pods_GlanceCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */; };
+		B74DCDA6219F5E2D00CD6E01 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */; };
+		B74DCDA8219F5E6500CD6E01 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74DCDA7219F5E6500CD6E01 /* EventKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		49E04608218668A600E78BFC /* MonthControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthControlButton.swift; sourceTree = "<group>"; };
 		4CB80A895BB6AA85D55B08AB /* Pods-GlanceCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		B74DCDA7219F5E6500CD6E01 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74DCDA8219F5E6500CD6E01 /* EventKit.framework in Frameworks */,
 				490022D721862D2C0010D83A /* ServiceManagement.framework in Frameworks */,
 				15F207EF0F2BC9E3C4B5E387 /* Pods_GlanceCalendar.framework in Frameworks */,
 			);
@@ -241,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				4935982E2198AE9200D6B853 /* Clock.swift */,
+				B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 		C9B3933A127766A7564194CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B74DCDA7219F5E6500CD6E01 /* EventKit.framework */,
 				490022D621862D2C0010D83A /* ServiceManagement.framework */,
 				2286680E7C02624035206ADC /* Pods_GlanceCalendar.framework */,
 				E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */,
@@ -494,6 +501,7 @@
 				4935982421977ECC00D6B853 /* CarbonKeyHandler.swift in Sources */,
 				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
 				49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */,
+				B74DCDA6219F5E2D00CD6E01 /* EventStore.swift in Sources */,
 				493598222197526700D6B853 /* Moment+Custom.swift in Sources */,
 				49004E42217D2C9C007C27ED /* MenuController.swift in Sources */,
 				490022BD218619FA0010D83A /* CalendarDayView.swift in Sources */,
