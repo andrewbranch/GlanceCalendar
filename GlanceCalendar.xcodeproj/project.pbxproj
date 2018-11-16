@@ -169,7 +169,10 @@
 				49004E48217D2C9D007C27ED /* Info.plist */,
 				49004E45217D2C9D007C27ED /* Main.storyboard */,
 				49004E3F217D2C9C007C27ED /* AppDelegate.swift */,
+				4935982321977ECC00D6B853 /* CarbonKeyHandler.swift */,
+				49004E41217D2C9C007C27ED /* MenuController.swift */,
 				4935982521989C4200D6B853 /* Extensions */,
+				B74DCDAB219F65DD00CD6E01 /* Models */,
 				4935982A2198A32700D6B853 /* Features */,
 			);
 			path = GlanceCalendar;
@@ -226,37 +229,10 @@
 		4935982A2198A32700D6B853 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B74DCDA9219F65A900CD6E01 /* Events */,
 				493598262198A25500D6B853 /* Calendar */,
-				4935982B2198A36200D6B853 /* Menu */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		4935982B2198A36200D6B853 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				4935982321977ECC00D6B853 /* CarbonKeyHandler.swift */,
-				493598302198AEA800D6B853 /* Models */,
-				493598312198AEB700D6B853 /* Controllers */,
-			);
-			path = Menu;
-			sourceTree = "<group>";
-		};
-		493598302198AEA800D6B853 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4935982E2198AE9200D6B853 /* Clock.swift */,
-				B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		493598312198AEB700D6B853 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				49004E41217D2C9C007C27ED /* MenuController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		494109EE217D6EB800DE2B45 /* GlanceCalendarTests */ = {
@@ -278,6 +254,22 @@
 				494838EF2186531D00B3D4F9 /* GlanceCalendarLauncher.entitlements */,
 			);
 			path = GlanceCalendarLauncher;
+			sourceTree = "<group>";
+		};
+		B74DCDA9219F65A900CD6E01 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		B74DCDAB219F65DD00CD6E01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */,
+				4935982E2198AE9200D6B853 /* Clock.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C9B3933A127766A7564194CC /* Frameworks */ = {
