@@ -24,6 +24,8 @@ class CalendarViewController: NSViewController {
     init(delegate: CalendarViewDelegate) {
         self.delegate = delegate
         super.init(nibName: "CalendarViewController", bundle: nil)
+        CarbonKeyHandler.shared.addHandler(forSpecialKey: .leftArrow) { [weak self] in self?.goToPreviousMonth() }
+        CarbonKeyHandler.shared.addHandler(forSpecialKey: .rightArrow) { [weak self] in self?.goToNextMonth() }
     }
     
     required init?(coder: NSCoder) {

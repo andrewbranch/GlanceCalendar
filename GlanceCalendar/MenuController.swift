@@ -53,9 +53,6 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
         menu.delegate = self
         statusItem.menu = menu
         
-        CarbonKeyHandler.shared.addHandler(forSpecialKey: .leftArrow) { [weak self] in self?.calendarViewController.goToPreviousMonth() }
-        CarbonKeyHandler.shared.addHandler(forSpecialKey: .rightArrow) { [weak self] in self?.calendarViewController.goToNextMonth() }
-        
         Clock.shared.onChange(quantum: .minute) { [weak self] time in
             DispatchQueue.main.async {
                 self?.updateTimeAndDateViews(time: time)
