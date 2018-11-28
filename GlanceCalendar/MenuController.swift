@@ -1,17 +1,35 @@
 import Cocoa
 import SwiftMoment
 
-class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
+class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStoreDelegate {
+    let menu = NSMenu()
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let dateTimeSettingsURL = URL(fileURLWithPath: "/System/Library/PreferencePanes/DateAndTime.prefPane")
     let dateMenuItem = NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: "")
+    let eventItemSeperator = NSMenuItem.separator()
+    var eventStore: EventStore!
     var calendarViewController: CalendarViewController!
     var highlightTitle: NSMutableAttributedString?
     var title: NSMutableAttributedString?
     var menuIsOpen = false
+    var eventItems: [NSMenuItem] = [] {
+        didSet {
+            oldValue.forEach { menu.removeItem($0) }
+            if eventItems.count > 0 && oldValue.count == 0 {
+                menu.insertItem(eventItemSeperator, at: 4)
+            } else if eventItems.count == 0 && oldValue.count > 0 {
+                menu.removeItem(eventItemSeperator)
+            }
+
+            eventItems.enumerated().forEach { menu.insertItem($0.element, at: 4 + $0.offset) }
+        }
+    }
     var selectedTime: Moment {
         didSet {
             calendarViewController.updateCalendar(currentTime: Clock.shared.currentTick, selectedTime: selectedTime)
+            if eventStore.hasAccessToEvents {
+                updateEventItems()
+            }
         }
     }
 
@@ -21,24 +39,19 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
         
         super.init()
         calendarViewController = CalendarViewController(delegate: self)
-        guard let button = statusItem.button else {
-            fatalError()
-        }
-
         highlightTitle = NSMutableAttributedString(string: Date.dayOfWeekAndTime(), attributes: [
             .foregroundColor: NSColor.white,
             // Default system clock uses a light weight when highlighted
-            .font: NSFont.systemFont(ofSize: button.cell?.font?.pointSize ?? 14, weight: .light),
+            .font: NSFont.systemFont(ofSize: statusItem.button!.cell?.font?.pointSize ?? 14, weight: .light),
             .baselineOffset: -1
         ])
         title = NSMutableAttributedString(string: Date.dayOfWeekAndTime(), attributes: [
             .baselineOffset: -1
         ])
         
-        button.attributedTitle = title!
-        button.attributedAlternateTitle = highlightTitle!
+        statusItem.button!.attributedTitle = title!
+        statusItem.button!.attributedAlternateTitle = highlightTitle!
         
-        let menu = NSMenu()
         menu.addItem(dateMenuItem)
         menu.addItem(NSMenuItem.separator())
         let calendarMenuItem = NSMenuItem()
@@ -59,6 +72,9 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
                 self?.calendarViewController.updateCalendar(currentTime: time, selectedTime: self!.selectedTime)
             }
         }
+        
+        eventStore = EventStore(delegate: self)
+        eventStore.requestAccessToEvents()
     }
     
     @objc func openDateTimeSettings() {
@@ -103,6 +119,24 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
     
     func calendarViewControllerDidRequestSelectedTimeToNow(viewController: CalendarViewController) {
         selectedTime = Clock.shared.currentTick
+    }
+    
+    func updateEventItems() {
+        eventItems = eventStore.getEventsForDay(endingAfter: selectedTime).map { event in
+            return NSMenuItem(title: event.title, action: nil, keyEquivalent: "")
+        }
+    }
+    
+    func receivedAccessToEvents() {
+        updateEventItems()
+    }
+    
+    func wasDeniedAccessToEvents() {
+        //
+    }
+    
+    func receivedErrorRequestingAccessToEvents(error: Error) {
+        //
     }
 }
 
