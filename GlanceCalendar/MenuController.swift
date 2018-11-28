@@ -1,4 +1,5 @@
 import Cocoa
+import EventKit
 import SwiftMoment
 
 class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStoreDelegate {
@@ -12,6 +13,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
     var highlightTitle: NSMutableAttributedString?
     var title: NSMutableAttributedString?
     var menuIsOpen = false
+    var events: [EKEvent] = []
     var eventItems: [NSMenuItem] = [] {
         didSet {
             oldValue.forEach { menu.removeItem($0) }
@@ -121,9 +123,25 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
         selectedTime = Clock.shared.currentTick
     }
     
-    func updateEventItems() {
-        eventItems = eventStore.getEventsForDay(endingAfter: selectedTime).map { event in
+    @objc func showAllEvents() {
+        eventItems = eventItems.dropLast() + events[4...].map { event in
             return NSMenuItem(title: event.title, action: nil, keyEquivalent: "")
+        }
+    }
+    
+    func updateEventItems() {
+        let events = eventStore.getEventsForDay(endingAfter: selectedTime)
+        self.events = events
+        if events.count > 0 {
+            eventItems = events[...min(events.count - 1, 3)].map { event in
+                return NSMenuItem(title: event.title, action: nil, keyEquivalent: "")
+            }
+            
+            if events.count > 4 {
+                eventItems.append(NSMenuItem(title: "Show \(events.count - 4) more", action: #selector(self.showAllEvents), keyEquivalent: ""))
+            }
+        } else {
+            eventItems = []
         }
     }
     
