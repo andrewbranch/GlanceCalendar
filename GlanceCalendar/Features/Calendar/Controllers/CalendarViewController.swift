@@ -21,15 +21,9 @@ class CalendarViewController: NSViewController {
     @IBOutlet var headerView: CalendarHeaderView!
     @IBOutlet var monthLabel: NSTextField!
 
-    init(delegate: CalendarViewDelegate, currentTime: Moment) {
+    init(delegate: CalendarViewDelegate) {
         self.delegate = delegate
         super.init(nibName: "CalendarViewController", bundle: nil)
-
-        var observation: NSKeyValueObservation?
-        observation = observe(\.isViewLoaded) { _, _ in
-            self.updateCalendar(currentTime: currentTime, selectedTime: currentTime)
-            observation?.invalidate()
-        }
     }
     
     required init?(coder: NSCoder) {
@@ -63,6 +57,9 @@ class CalendarViewController: NSViewController {
         monthControlsContainer.widthAnchor.constraint(equalToConstant: prevButton.frame.width + nextButton.frame.width + todayButton.frame.width + 2 * controlButtonMargin).isActive = true
         monthControlsContainer.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
         monthControlsContainer.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
+        
+        let now = Clock.shared.currentTick
+        updateCalendar(currentTime: now, selectedTime: now)
     }
     
     @objc func goToToday() {

@@ -20,13 +20,14 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
         selectedTime = now
         
         super.init()
-        calendarViewController = CalendarViewController(delegate: self, currentTime: now)
+        calendarViewController = CalendarViewController(delegate: self)
         guard let button = statusItem.button else {
             fatalError()
         }
 
         highlightTitle = NSMutableAttributedString(string: Date.dayOfWeekAndTime(), attributes: [
             .foregroundColor: NSColor.white,
+            // Default system clock uses a light weight when highlighted
             .font: NSFont.systemFont(ofSize: button.cell?.font?.pointSize ?? 14, weight: .light),
             .baselineOffset: -1
         ])
@@ -35,7 +36,6 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
         ])
         
         button.attributedTitle = title!
-        // Default system clock uses a light weight when highlighted
         button.attributedAlternateTitle = highlightTitle!
         
         let menu = NSMenu()
