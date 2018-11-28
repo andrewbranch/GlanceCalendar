@@ -1,17 +1,26 @@
 import Cocoa
 import SwiftMoment
 
-class MenuController: NSObject, NSMenuDelegate {
+class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let dateTimeSettingsURL = URL(fileURLWithPath: "/System/Library/PreferencePanes/DateAndTime.prefPane")
     let dateMenuItem = NSMenuItem(title: Date.fullDate(), action: nil, keyEquivalent: "")
-    let calendarViewController = CalendarViewController(currentDate: Clock.shared.currentTick)
+    var calendarViewController: CalendarViewController!
     var highlightTitle: NSMutableAttributedString?
     var title: NSMutableAttributedString?
     var menuIsOpen = false
+    var selectedTime: Moment {
+        didSet {
+            calendarViewController.updateCalendar(currentTime: Clock.shared.currentTick, selectedTime: selectedTime)
+        }
+    }
 
     override init() {
+        let now = Clock.shared.currentTick
+        selectedTime = now
+        
         super.init()
+        calendarViewController = CalendarViewController(delegate: self, currentTime: now)
         guard let button = statusItem.button else {
             fatalError()
         }
@@ -49,7 +58,8 @@ class MenuController: NSObject, NSMenuDelegate {
         
         Clock.shared.onChange(quantum: .minute) { [weak self] time in
             DispatchQueue.main.async {
-                self?.updateTime(time)
+                self?.updateTimeAndDateViews(time: time)
+                self?.calendarViewController.updateCalendar(currentTime: time, selectedTime: self!.selectedTime)
             }
         }
     }
@@ -58,7 +68,7 @@ class MenuController: NSObject, NSMenuDelegate {
         NSWorkspace.shared.open(dateTimeSettingsURL)
     }
     
-    func updateTime(_ time: Moment = Clock.shared.currentTick) {
+    func updateTimeAndDateViews(time: Moment = Clock.shared.currentTick) {
         let timeString = Date.dayOfWeekAndTime()
         title!.mutableString.setString(timeString)
         highlightTitle!.mutableString.setString(timeString)
@@ -66,15 +76,12 @@ class MenuController: NSObject, NSMenuDelegate {
         dateMenuItem.title = Date.fullDate()
         if menuIsOpen {
             statusItem.button!.attributedAlternateTitle = highlightTitle!
-        } else {
-            calendarViewController.selectedDate = time
         }
-        calendarViewController.currentDate = time
     }
     
     func menuWillOpen(_ menu: NSMenu) {
         menuIsOpen = true
-        updateTime()
+        updateTimeAndDateViews()
     }
     
     // After becoming unhighlighted, the text gets stuck kind of bold for some reason
@@ -83,6 +90,22 @@ class MenuController: NSObject, NSMenuDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50)) { [weak self] in
             self?.statusItem.button?.setNeedsDisplay(self!.statusItem.button!.bounds)
         }
+    }
+    
+    func calendarViewController(viewController: CalendarViewController, didRequestSelectedTime time: Moment) {
+        selectedTime = time
+    }
+    
+    func calendarViewController(viewController: CalendarViewController, didRequestMonthChange addMonths: Int) {
+        let now = Clock.shared.currentTick
+        let newMonth = moment([selectedTime.year, selectedTime.month + addMonths])!
+        let isCurrentMonth = newMonth.isSameMonth(now)
+        let newTime = isCurrentMonth ? moment([newMonth.year, newMonth.month, now.day])! : newMonth
+        selectedTime = newTime
+    }
+    
+    func calendarViewControllerDidRequestSelectedTimeToNow(viewController: CalendarViewController) {
+        selectedTime = Clock.shared.currentTick
     }
 }
 

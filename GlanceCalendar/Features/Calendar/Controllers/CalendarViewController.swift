@@ -2,38 +2,34 @@ import Cocoa
 import SwiftMoment
 import Carbon
 
+protocol CalendarViewDelegate {
+    func calendarViewController(viewController: CalendarViewController, didRequestSelectedTime time: Moment) -> Void
+    func calendarViewController(viewController: CalendarViewController, didRequestMonthChange addMonths: Int) -> Void
+    func calendarViewControllerDidRequestSelectedTimeToNow(viewController: CalendarViewController) -> Void
+}
+
 class CalendarViewController: NSViewController {
     let dayViewSize: CGFloat = 24
     let dayViewMargin: CGFloat = 4
     let controlButtonMargin: CGFloat = 0
     let calendar = CalendarGrid()
     
+    var delegate: CalendarViewDelegate
     var calendarHeightConstraint: NSLayoutConstraint?
     var dayViewControllers: [CalendarDayViewController] = []
     @IBOutlet var insetView: NSView!
     @IBOutlet var headerView: CalendarHeaderView!
     @IBOutlet var monthLabel: NSTextField!
-    public var currentDate: Moment {
-        didSet {
-            if currentDate.isSameMonth(selectedDate) && !oldValue.isSameDay(currentDate) {
-                updateCurrentDay(prevDay: oldValue, nextDay: currentDate)
-            }
-        }
-    }
-    public var selectedDate: Moment {
-        didSet {
-            if !oldValue.isSameMonth(selectedDate) {
-                updateCalendar()
-            } else if oldValue.day != selectedDate.day {
-                updateSelectedDay(prevDay: oldValue, nextDay: selectedDate)
-            }
-        }
-    }
 
-    init(currentDate: Moment) {
-        self.currentDate = currentDate
-        self.selectedDate = currentDate
+    init(delegate: CalendarViewDelegate, currentTime: Moment) {
+        self.delegate = delegate
         super.init(nibName: "CalendarViewController", bundle: nil)
+
+        var observation: NSKeyValueObservation?
+        observation = observe(\.isViewLoaded) { _, _ in
+            self.updateCalendar(currentTime: currentTime, selectedTime: currentTime)
+            observation?.invalidate()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -67,38 +63,31 @@ class CalendarViewController: NSViewController {
         monthControlsContainer.widthAnchor.constraint(equalToConstant: prevButton.frame.width + nextButton.frame.width + todayButton.frame.width + 2 * controlButtonMargin).isActive = true
         monthControlsContainer.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
         monthControlsContainer.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
-
-        updateCalendar()
-    }
-    
-    func setMonth(month: Int, year: Int) {
-        let isCurrentMonth = (year, month) == (currentDate.year, currentDate.month)
-        selectedDate = moment([year, month, isCurrentMonth ? currentDate.day : 1])!
     }
     
     @objc func goToToday() {
-        selectedDate = currentDate
+        delegate.calendarViewControllerDidRequestSelectedTimeToNow(viewController: self)
     }
     
     @objc func goToPreviousMonth() {
-        setMonth(month: selectedDate.month - 1, year: selectedDate.year)
+        delegate.calendarViewController(viewController: self, didRequestMonthChange: -1)
     }
     
     @objc func goToNextMonth() {
-        setMonth(month: selectedDate.month + 1, year: selectedDate.year)
+        delegate.calendarViewController(viewController: self, didRequestMonthChange: 1)
     }
     
-    func updateCalendar() {
+    func updateCalendar(currentTime: Moment, selectedTime: Moment) {
         dayViewControllers.forEach {
             $0.view.viewWillMove(toSuperview: nil)
             $0.view.removeFromSuperview()
             $0.removeFromParent()
         }
 
-        let weeks = calendar.getWeeks(month: selectedDate.month, year: selectedDate.year)
+        let weeks = calendar.getWeeks(month: selectedTime.month, year: selectedTime.year)
         dayViewControllers = []
         monthLabel.stringValue = weeks[1][0].monthName
-        if weeks[1][0].year != currentDate.year {
+        if weeks[1][0].year != currentTime.year {
             monthLabel.stringValue += " \(weeks[1][0].year)"
         }
         weeks.enumerated().forEach { week in
@@ -111,13 +100,13 @@ class CalendarViewController: NSViewController {
                         height: dayViewSize
                     ),
                     day: day.element.day,
-                    isToday: day.element.isSameDay(currentDate),
-                    inAdjacentMonth: !day.element.isSameMonth(selectedDate),
+                    isToday: day.element.isSameDay(currentTime),
+                    inAdjacentMonth: !day.element.isSameMonth(selectedTime),
                     onClick: { [weak self] in
-                        self?.selectedDate = day.element
+                        self?.delegate.calendarViewController(viewController: self!, didRequestSelectedTime: day.element)
                     }
                 )
-                vc.isSelected = day.element.isSameDay(selectedDate)
+                vc.isSelected = day.element.isSameDay(selectedTime)
                 addChild(vc)
                 insetView.addSubview(vc.view)
                 dayViewControllers.append(vc)

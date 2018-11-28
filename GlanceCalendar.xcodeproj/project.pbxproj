@@ -212,8 +212,8 @@
 		493598282198A29B00D6B853 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */,
 				49004E57217D57C7007C27ED /* CalendarViewController.swift */,
+				494109F9217D798D00DE2B45 /* CalendarDayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
