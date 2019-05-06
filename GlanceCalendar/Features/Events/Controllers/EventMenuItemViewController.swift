@@ -70,17 +70,13 @@ class EventMenuItemViewController: NSViewController {
         // Time
         var timeLabel: NSTextField?
         if !event.isAllDay {
-            timeLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: event.startDate.time(), attributes: [
-                .font: NSFont.systemFont(ofSize: 11),
-                .foregroundColor: NSColor.secondaryLabelColor
-            ]))
+            timeLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: event.startDate.time(), attributes: secondaryAttributes))
+            let intrinsicWidth = ceil(timeLabel!.attributedStringValue.boundingRect(with: view.frame.size, options: []).width)
             timeLabel!.isEditable = false
             timeLabel!.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(timeLabel!)
+            timeLabel!.widthAnchor.constraint(equalToConstant: intrinsicWidth).isActive = true
             timeLabel!.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
-            let widthConstraint = timeLabel!.widthAnchor.constraint(equalToConstant: 0)
-            widthConstraint.priority = .defaultLow
-            widthConstraint.isActive = true
             timeLabel!.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
             timeLabel!.heightAnchor.constraint(equalToConstant: design.secondaryLabelHeight).isActive = true
         }
@@ -89,9 +85,11 @@ class EventMenuItemViewController: NSViewController {
         var separator: NSTextField?
         if !event.isAllDay && event.location != nil {
             separator = NSTextField(labelWithAttributedString: NSAttributedString(string: "･", attributes: secondaryAttributes))
+            let intrinsicWidth = ceil(separator!.attributedStringValue.boundingRect(with: view.frame.size, options: []).width)
             separator!.isEditable = false
             separator!.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(separator!)
+            separator!.widthAnchor.constraint(equalToConstant: intrinsicWidth).isActive = true
             separator!.leadingAnchor.constraint(equalTo: timeLabel!.trailingAnchor, constant: design.menuItemBulletMargin).isActive = true
             separator!.heightAnchor.constraint(equalToConstant: design.secondaryLabelHeight).isActive = true
             separator!.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
