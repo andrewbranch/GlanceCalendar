@@ -14,16 +14,16 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
     var title: NSMutableAttributedString?
     var menuIsOpen = false
     var events: [EKEvent] = []
-    var eventItems: [NSMenuItem] = [] {
+    var eventItems: [EventMenuItemViewController] = [] {
         didSet {
-            oldValue.forEach { menu.removeItem($0) }
+            oldValue.forEach { menu.removeItem($0.menuItem) }
             if eventItems.count > 0 && oldValue.count == 0 {
                 menu.insertItem(eventItemSeperator, at: 4)
             } else if eventItems.count == 0 && oldValue.count > 0 {
                 menu.removeItem(eventItemSeperator)
             }
 
-            eventItems.enumerated().forEach { menu.insertItem($0.element, at: 4 + $0.offset) }
+            eventItems.enumerated().forEach { menu.insertItem($0.element.menuItem, at: 4 + $0.offset) }
         }
     }
     var selectedTime: Moment {
@@ -125,7 +125,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
     
     @objc func showAllEvents() {
         eventItems = eventItems.dropLast() + events[4...].map { event in
-            return NSMenuItem(title: event.title, action: nil, keyEquivalent: "")
+            return EventMenuItemViewController(event: event)
         }
     }
     
@@ -133,13 +133,15 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
         let events = eventStore.getEventsForDay(endingAfter: selectedTime)
         self.events = events
         if events.count > 0 {
-            eventItems = events[...min(events.count - 1, 3)].map { event in
-                return NSMenuItem(title: event.title, action: nil, keyEquivalent: "")
+            DispatchQueue.main.async { [unowned self] in
+                self.eventItems = self.events[...min(self.events.count - 1, 3)].map { event in
+                    return EventMenuItemViewController(event: event)
+                }
             }
             
-            if events.count > 4 {
-                eventItems.append(NSMenuItem(title: "Show \(events.count - 4) more", action: #selector(self.showAllEvents), keyEquivalent: ""))
-            }
+//            if events.count > 4 {
+//                eventItems.append(NSMenuItem(title: "Show \(events.count - 4) more", action: #selector(self.showAllEvents), keyEquivalent: ""))
+//            }
         } else {
             eventItems = []
         }

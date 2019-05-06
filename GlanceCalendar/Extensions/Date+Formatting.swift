@@ -29,4 +29,8 @@ extension Date {
         let date = Date(timeIntervalSinceNow: 0)
         return DateFormatters.shared.date.string(from: date)
     }
+    
+    func time() -> String {
+        return DateFormatters.shared.time.string(from: self)
+    }
 }

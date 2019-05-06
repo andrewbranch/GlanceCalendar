@@ -36,6 +36,7 @@
 		7A4724C97C4EAF528F95D082 /* Pods_GlanceCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */; };
 		B74DCDA6219F5E2D00CD6E01 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */; };
 		B74DCDA8219F5E6500CD6E01 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74DCDA7219F5E6500CD6E01 /* EventKit.framework */; };
+		B7B9D8F0227FB6DD0088F377 /* EventMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B9D8EF227FB6DD0088F377 /* EventMenuItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		B74DCDA7219F5E6500CD6E01 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		B7B9D8EF227FB6DD0088F377 /* EventMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMenuItemViewController.swift; sourceTree = "<group>"; };
 		E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -259,6 +261,8 @@
 		B74DCDA9219F65A900CD6E01 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				B7B9D8F1227FB6E40088F377 /* Controllers */,
+				B7B9D8EC227FB60B0088F377 /* Views */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -270,6 +274,21 @@
 				4935982E2198AE9200D6B853 /* Clock.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B7B9D8EC227FB60B0088F377 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7B9D8F1227FB6E40088F377 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7B9D8EF227FB6DD0088F377 /* EventMenuItemViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C9B3933A127766A7564194CC /* Frameworks */ = {
@@ -491,6 +510,7 @@
 				49004E59217D57C7007C27ED /* CalendarViewController.swift in Sources */,
 				490022DB218630090010D83A /* Notification.Name+Custom.swift in Sources */,
 				4935982421977ECC00D6B853 /* CarbonKeyHandler.swift in Sources */,
+				B7B9D8F0227FB6DD0088F377 /* EventMenuItemViewController.swift in Sources */,
 				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
 				49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */,
 				B74DCDA6219F5E2D00CD6E01 /* EventStore.swift in Sources */,
