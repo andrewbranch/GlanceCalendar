@@ -9,9 +9,9 @@ protocol CalendarViewDelegate {
 }
 
 class CalendarViewController: NSViewController {
-    let dayViewSize: CGFloat = 24
-    let dayViewMargin: CGFloat = 4
-    let controlButtonMargin: CGFloat = 0
+    let dayViewSize = DesignFacts.defaultDesign.calendar.dayViewSize
+    let dayViewMargin = DesignFacts.defaultDesign.calendar.dayViewMargin
+    let controlButtonMargin = DesignFacts.defaultDesign.calendar.controlButtonMargin
     let calendar = CalendarGrid()
     
     var delegate: CalendarViewDelegate

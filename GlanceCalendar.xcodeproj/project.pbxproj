@@ -37,6 +37,7 @@
 		B74DCDA6219F5E2D00CD6E01 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */; };
 		B74DCDA8219F5E6500CD6E01 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74DCDA7219F5E6500CD6E01 /* EventKit.framework */; };
 		B7B9D8F0227FB6DD0088F377 /* EventMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B9D8EF227FB6DD0088F377 /* EventMenuItemViewController.swift */; };
+		B7B9D8F3227FD3100088F377 /* DesignFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B9D8F2227FD3100088F377 /* DesignFacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		B74DCDA7219F5E6500CD6E01 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		B7B9D8EF227FB6DD0088F377 /* EventMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMenuItemViewController.swift; sourceTree = "<group>"; };
+		B7B9D8F2227FD3100088F377 /* DesignFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignFacts.swift; sourceTree = "<group>"; };
 		E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlanceCalendarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -272,6 +274,7 @@
 			children = (
 				B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */,
 				4935982E2198AE9200D6B853 /* Clock.swift */,
+				B7B9D8F2227FD3100088F377 /* DesignFacts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
 				49E04609218668A600E78BFC /* MonthControlButton.swift in Sources */,
 				4935982F2198AE9200D6B853 /* Clock.swift in Sources */,
+				B7B9D8F3227FD3100088F377 /* DesignFacts.swift in Sources */,
 				49004E50217D2E55007C27ED /* Date+Formatting.swift in Sources */,
 				490022B621857CA10010D83A /* NSColor+Custom.swift in Sources */,
 				49004E5D217D6522007C27ED /* CalendarGrid.swift in Sources */,
