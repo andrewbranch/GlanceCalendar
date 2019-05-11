@@ -13,6 +13,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
     var highlightTitle: NSMutableAttributedString?
     var title: NSMutableAttributedString?
     var menuIsOpen = false
+    var highlightedEvent: EventMenuItemViewController?
     var events: [EKEvent] = []
     var eventItems: [EventMenuItemViewController] = [] {
         didSet {
@@ -104,6 +105,16 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
         menuIsOpen = false
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50)) { [weak self] in
             self?.statusItem.button?.setNeedsDisplay(self!.statusItem.button!.bounds)
+        }
+    }
+    
+    func menu(_ menu: NSMenu, willHighlight item: NSMenuItem?) {
+        if let prevController = highlightedEvent {
+            prevController.unhighlight()
+        }
+        if let controller = eventItems.first(where: { $0.menuItem == item }) {
+            controller.highlight()
+            highlightedEvent = controller
         }
     }
     

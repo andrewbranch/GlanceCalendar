@@ -14,10 +14,11 @@ class EventMenuItemViewController: NSViewController {
 
     init(event: EKEvent) {
         self.event = event
-        menuItem = NSMenuItem(title: "", action: nil, keyEquivalent: "")
-        menuItem.setAccessibilityLabel(event.title)
+        menuItem = NSMenuItem(title: event.title, action: #selector(self.viewInCalendar), keyEquivalent: "")
+        menuItem.isEnabled = true
         super.init(nibName: nil, bundle: nil)
         menuItem.view = view
+        view.wantsLayer = true
     }
     
     override func loadView() {
@@ -48,6 +49,7 @@ class EventMenuItemViewController: NSViewController {
         // Title
         let titleLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: event.title, attributes: primaryAttributes))
         titleLabel.isEditable = false
+        titleLabel.wantsLayer = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(titleLabel)
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: marginLeft).isActive = true
@@ -109,5 +111,17 @@ class EventMenuItemViewController: NSViewController {
                 locationLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
             }
         }
+    }
+    
+    public func highlight() {
+        view.layer?.backgroundColor = NSColor.selectedMenuItemColor.cgColor
+    }
+    
+    public func unhighlight() {
+        view.layer?.backgroundColor = CGColor.clear
+    }
+    
+    @objc private func viewInCalendar() {
+        
     }
 }
