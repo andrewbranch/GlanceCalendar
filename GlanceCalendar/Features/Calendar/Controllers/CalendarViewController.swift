@@ -18,7 +18,7 @@ class CalendarViewController: NSViewController {
     var calendarHeightConstraint: NSLayoutConstraint?
     var dayViewControllers: [CalendarDayViewController] = []
     @IBOutlet var insetView: NSView!
-    @IBOutlet var headerView: CalendarHeaderView!
+    @IBOutlet var headerView: VibrantView!
     @IBOutlet var monthLabel: NSTextField!
 
     init(delegate: CalendarViewDelegate) {

@@ -5,6 +5,10 @@ class EventMenuItemViewController: NSViewController {
     let event: EKEvent
     let menuItem: NSMenuItem
     let design = DesignFacts.defaultDesign.events
+    let titleLabel: NSTextField
+    var timeLabel: NSTextField? = nil
+    var separator: NSTextField? = nil
+    var locationLabel: NSTextField? = nil
     
     private var isMultiLine: Bool {
         get {
@@ -16,24 +20,6 @@ class EventMenuItemViewController: NSViewController {
         self.event = event
         menuItem = NSMenuItem(title: event.title, action: #selector(self.viewInCalendar), keyEquivalent: "")
         menuItem.isEnabled = true
-        super.init(nibName: nil, bundle: nil)
-        menuItem.view = view
-        view.wantsLayer = true
-    }
-    
-    override func loadView() {
-        let height = isMultiLine ? design.multiLineMenuItemHeight : design.singleLineMenuItemHeight
-        view = NSView(frame: NSRect(x: 0, y: 0, width: 240, height: height))
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
-    
-    override func viewDidLoad() {
-        let marginLeft = DesignFacts.defaultDesign.common.menuMarginLeft
-        let marginRight = DesignFacts.defaultDesign.common.menuMarginRight
-        
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byTruncatingTail
         let primaryAttributes: [NSAttributedString.Key: Any] = [
@@ -46,12 +32,37 @@ class EventMenuItemViewController: NSViewController {
             .paragraphStyle: paragraphStyle
         ]
 
+        titleLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: event.title, attributes: primaryAttributes))
+        
+        if !event.isAllDay {
+            timeLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: event.startDate.time(), attributes: secondaryAttributes))
+        }
+        if !event.isAllDay && event.location != nil {
+            separator = NSTextField(labelWithAttributedString: NSAttributedString(string: "･", attributes: secondaryAttributes))
+        }
+        if let location = event.location {
+            locationLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: location, attributes: secondaryAttributes))
+        }
+        
+        super.init(nibName: nil, bundle: nil)
+        menuItem.view = view
+    }
+    
+    override func loadView() {
+        let height = isMultiLine ? design.multiLineMenuItemHeight : design.singleLineMenuItemHeight
+        view = CustomMenuItemView(frame: NSRect(x: 0, y: 0, width: 240, height: height))
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
+    override func viewDidLoad() {
+        let marginLeft = DesignFacts.defaultDesign.common.menuMarginLeft
+        let marginRight = DesignFacts.defaultDesign.common.menuMarginRight
+
         // Title
-        let titleLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: event.title, attributes: primaryAttributes))
-        titleLabel.isEditable = false
-        titleLabel.wantsLayer = true
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(titleLabel)
+        setupTextField(titleLabel)
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: marginLeft).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -marginRight).isActive = true
         titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: design.menuItemLineMargin).isActive = true
@@ -70,39 +81,28 @@ class EventMenuItemViewController: NSViewController {
         dot.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: design.dotOffsetLeft).isActive = true
         
         // Time
-        var timeLabel: NSTextField?
-        if !event.isAllDay {
-            timeLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: event.startDate.time(), attributes: secondaryAttributes))
-            let intrinsicWidth = ceil(timeLabel!.attributedStringValue.boundingRect(with: view.frame.size, options: []).width)
-            timeLabel!.isEditable = false
-            timeLabel!.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(timeLabel!)
-            timeLabel!.widthAnchor.constraint(equalToConstant: intrinsicWidth).isActive = true
-            timeLabel!.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
-            timeLabel!.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
-            timeLabel!.heightAnchor.constraint(equalToConstant: design.secondaryLabelHeight).isActive = true
+        if let timeLabel = timeLabel {
+            let intrinsicWidth = ceil(timeLabel.attributedStringValue.boundingRect(with: view.frame.size, options: []).width)
+            setupTextField(timeLabel)
+            timeLabel.widthAnchor.constraint(equalToConstant: intrinsicWidth).isActive = true
+            timeLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
+            timeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+            timeLabel.heightAnchor.constraint(equalToConstant: design.secondaryLabelHeight).isActive = true
         }
         
         // Separator
-        var separator: NSTextField?
-        if !event.isAllDay && event.location != nil {
-            separator = NSTextField(labelWithAttributedString: NSAttributedString(string: "･", attributes: secondaryAttributes))
-            let intrinsicWidth = ceil(separator!.attributedStringValue.boundingRect(with: view.frame.size, options: []).width)
-            separator!.isEditable = false
-            separator!.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(separator!)
-            separator!.widthAnchor.constraint(equalToConstant: intrinsicWidth).isActive = true
-            separator!.leadingAnchor.constraint(equalTo: timeLabel!.trailingAnchor, constant: design.menuItemBulletMargin).isActive = true
-            separator!.heightAnchor.constraint(equalToConstant: design.secondaryLabelHeight).isActive = true
-            separator!.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+        if let separator = separator {
+            let intrinsicWidth = ceil(separator.attributedStringValue.boundingRect(with: view.frame.size, options: []).width)
+            setupTextField(separator)
+            separator.widthAnchor.constraint(equalToConstant: intrinsicWidth).isActive = true
+            separator.leadingAnchor.constraint(equalTo: timeLabel!.trailingAnchor, constant: design.menuItemBulletMargin).isActive = true
+            separator.heightAnchor.constraint(equalToConstant: design.secondaryLabelHeight).isActive = true
+            separator.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
         }
         
         // Location
-        if let location = event.location {
-            let locationLabel = NSTextField(labelWithAttributedString: NSAttributedString(string: location, attributes: secondaryAttributes))
-            locationLabel.isEditable = false
-            locationLabel.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(locationLabel)
+        if let locationLabel = locationLabel {
+            setupTextField(locationLabel)
             locationLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
             locationLabel.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -marginRight).isActive = true
             if let separator = separator {
@@ -113,12 +113,19 @@ class EventMenuItemViewController: NSViewController {
         }
     }
     
+    private func setupTextField(_ textField: NSTextField) {
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(textField)
+        textField.isEditable = false
+        textField.isBezeled = false
+    }
+    
     public func highlight() {
-        view.layer?.backgroundColor = NSColor.selectedMenuItemColor.cgColor
+        
     }
     
     public func unhighlight() {
-        view.layer?.backgroundColor = CGColor.clear
+        
     }
     
     @objc private func viewInCalendar() {

@@ -31,7 +31,9 @@
 		494838F3218653BF00B3D4F9 /* Notification.Name+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490022DA218630090010D83A /* Notification.Name+Custom.swift */; };
 		494838F4218653DF00B3D4F9 /* GlanceCalendarLauncher.app in Resources */ = {isa = PBXBuildFile; fileRef = 494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */; };
 		494838F82186540E00B3D4F9 /* GlanceCalendarLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 494838E32186531B00B3D4F9 /* GlanceCalendarLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD9A0D21865DC3004D7CD6 /* CalendarHeaderView.swift */; };
+		498B229222922EFE005A6693 /* NSAppearance+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B229122922EFE005A6693 /* NSAppearance+Custom.swift */; };
+		498B22992294F3BE005A6693 /* CustomMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B22982294F3BE005A6693 /* CustomMenuItemView.swift */; };
+		49DD9A0E21865DC3004D7CD6 /* VibrantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD9A0D21865DC3004D7CD6 /* VibrantView.swift */; };
 		49E04609218668A600E78BFC /* MonthControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E04608218668A600E78BFC /* MonthControlButton.swift */; };
 		7A4724C97C4EAF528F95D082 /* Pods_GlanceCalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39CCFA443172F213B082F45 /* Pods_GlanceCalendarTests.framework */; };
 		B74DCDA6219F5E2D00CD6E01 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74DCDA5219F5E2D00CD6E01 /* EventStore.swift */; };
@@ -102,7 +104,9 @@
 		494838EC2186531D00B3D4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		494838EE2186531D00B3D4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494838EF2186531D00B3D4F9 /* GlanceCalendarLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlanceCalendarLauncher.entitlements; sourceTree = "<group>"; };
-		49DD9A0D21865DC3004D7CD6 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		498B229122922EFE005A6693 /* NSAppearance+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAppearance+Custom.swift"; sourceTree = "<group>"; };
+		498B22982294F3BE005A6693 /* CustomMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItemView.swift; sourceTree = "<group>"; };
+		49DD9A0D21865DC3004D7CD6 /* VibrantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrantView.swift; sourceTree = "<group>"; };
 		49E04608218668A600E78BFC /* MonthControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthControlButton.swift; sourceTree = "<group>"; };
 		4CB80A895BB6AA85D55B08AB /* Pods-GlanceCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendarTests/Pods-GlanceCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		70808874E257742B92532576 /* Pods-GlanceCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlanceCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlanceCalendar/Pods-GlanceCalendar.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				49004E41217D2C9C007C27ED /* MenuController.swift */,
 				4935982521989C4200D6B853 /* Extensions */,
 				B74DCDAB219F65DD00CD6E01 /* Models */,
+				498B229022920261005A6693 /* Views */,
 				4935982A2198A32700D6B853 /* Features */,
 			);
 			path = GlanceCalendar;
@@ -188,6 +193,7 @@
 				49004E4F217D2E55007C27ED /* Date+Formatting.swift */,
 				493598212197526700D6B853 /* Moment+Custom.swift */,
 				490022B421857CA10010D83A /* NSColor+Custom.swift */,
+				498B229122922EFE005A6693 /* NSAppearance+Custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,7 +213,6 @@
 			children = (
 				49004E58217D57C7007C27ED /* CalendarViewController.xib */,
 				490022BC218619FA0010D83A /* CalendarDayView.swift */,
-				49DD9A0D21865DC3004D7CD6 /* CalendarHeaderView.swift */,
 				49E04608218668A600E78BFC /* MonthControlButton.swift */,
 			);
 			path = Views;
@@ -258,6 +263,15 @@
 				494838EF2186531D00B3D4F9 /* GlanceCalendarLauncher.entitlements */,
 			);
 			path = GlanceCalendarLauncher;
+			sourceTree = "<group>";
+		};
+		498B229022920261005A6693 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49DD9A0D21865DC3004D7CD6 /* VibrantView.swift */,
+				498B22982294F3BE005A6693 /* CustomMenuItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B74DCDA9219F65A900CD6E01 /* Events */ = {
@@ -515,10 +529,12 @@
 				4935982421977ECC00D6B853 /* CarbonKeyHandler.swift in Sources */,
 				B7B9D8F0227FB6DD0088F377 /* EventMenuItemViewController.swift in Sources */,
 				494109FB217D798D00DE2B45 /* CalendarDayViewController.swift in Sources */,
-				49DD9A0E21865DC3004D7CD6 /* CalendarHeaderView.swift in Sources */,
+				49DD9A0E21865DC3004D7CD6 /* VibrantView.swift in Sources */,
+				498B22992294F3BE005A6693 /* CustomMenuItemView.swift in Sources */,
 				B74DCDA6219F5E2D00CD6E01 /* EventStore.swift in Sources */,
 				493598222197526700D6B853 /* Moment+Custom.swift in Sources */,
 				49004E42217D2C9C007C27ED /* MenuController.swift in Sources */,
+				498B229222922EFE005A6693 /* NSAppearance+Custom.swift in Sources */,
 				490022BD218619FA0010D83A /* CalendarDayView.swift in Sources */,
 				49004E40217D2C9C007C27ED /* AppDelegate.swift in Sources */,
 				49E04609218668A600E78BFC /* MonthControlButton.swift in Sources */,
