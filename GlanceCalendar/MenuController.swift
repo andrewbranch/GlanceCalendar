@@ -98,6 +98,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
     func menuWillOpen(_ menu: NSMenu) {
         menuIsOpen = true
         updateTimeAndDateViews()
+        updateEventItems()
     }
     
     // After becoming unhighlighted, the text gets stuck kind of bold for some reason
@@ -141,7 +142,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
     }
     
     func updateEventItems() {
-        let events = eventStore.getEventsForDay(endingAfter: selectedTime)
+        let events = eventStore.getEventsForDay(endingAfter: selectedTime.startOf(.Days))
         self.events = events
         if events.count > 0 {
             DispatchQueue.main.async { [unowned self] in

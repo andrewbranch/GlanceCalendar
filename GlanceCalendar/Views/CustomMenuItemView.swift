@@ -1,11 +1,3 @@
-//
-//  CustomMenuItemView.swift
-//  GlanceCalendar
-//
-//  Created by Andrew Branch on 5/21/19.
-//  Copyright © 2019 Wheream.io. All rights reserved.
-//
-
 import Cocoa
 
 class CustomMenuItemView: NSView {
